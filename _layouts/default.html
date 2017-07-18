@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
+	<html lang="en">
+	
+		{% include head.html %}
+		
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/cv">Research</a></li>
-	        		<li><a href="/blog">Resources</a></li>
-	        		<li><a href="/blog">Bloq</a></li>
-	    		</ul>
-			</nav>
+			
+			
+		   {% include header.html %}
+		   
 			<div class="container">
 			
 			{{ content }}
 			
 			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:georgepanagopoulos5@yahoo.gr">Email</a></li>
-					<li><a href="https://www.linkedin.com/in/giorgospanagopoulos/">LinkedIn</a></li>
-					<li><a href="https://scholar.google.gr/citations?user=6PLvpVMAAAAJ&hl=en">Scholar</a></li>
-					<li><a href="https://github.com/GiorgosPanagopoulos">Github</a></li>
-				</ul>
-			</footer>
+			
+			{% include footer.html %}
+			
+			
 		</body>
 	</html>
