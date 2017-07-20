@@ -2,14 +2,15 @@
 layout: default
 title: George Panagopoulos
 ---
-	<h1>{{ page.title }}</h1>
 	<ul class="posts">
 	<div>
-	 A bloq where I log my discoveries and impressions in the brave (not so) new world of machine learning, data mining and brain computer interfaces.<br>	
+	 A bloq where I log my discoveries and impressions in the brave (not so) new world of machine learning, data mining and brain computer interfaces.
 	 It includes three types of posts, signified by a respective label in the title of the post:
+	 <ol>
 		<li>Basic: Important algorithms in explain-to-my-grandmother style. Note though that my grandmother is kinda smart and patient.</li>
 		<li>Advanced: More involved and recent concepts, hopefully built clearly in posts of the "Basic" type, or to specific resources.</li>
 		<li>Abstract: Reveiws, opinions and generally more philosophical and abstract stuff related to the field.</li>
+	</ol>
 	 </div>
 	  {% for post in site.posts %}
 	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
