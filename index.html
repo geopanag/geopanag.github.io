@@ -516,7 +516,7 @@ title: aaaaaaaaaaaaa
     </ul>
     <div id="portfolio_grid" class="blog-masonry">        
          {% for post in site.posts %}
-            <figure class="item" data-groups='["all", "",{% for category in post.categories %}, "{{ category }}"{% endfor %}]'>
+            <figure class="item" data-groups='["all", ""{% for category in post.categories %}, "{{ category }}"{% endfor %}]'>
                 <div class="blog-card">
                     <div class="post-info">
                         <a href="{{post.url}}">
