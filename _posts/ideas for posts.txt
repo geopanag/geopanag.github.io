@@ -1,3 +1,0 @@
-Pearson ,least squares, bias variance
-Linear discriminant analysis and common spatial patterns
-Market network bargaining
