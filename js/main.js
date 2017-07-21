@@ -98,7 +98,7 @@
         });
 
         // Text rotator init
-        $('#rotate').rotaterator({fadeSpeed: 800, pauseSpeed: 1900});
+        //$('#rotate').rotaterator({fadeSpeed: 800, pauseSpeed: 1900});
 
 
         // Blog grid init
