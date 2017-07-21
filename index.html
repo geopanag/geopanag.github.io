@@ -515,23 +515,28 @@ title: aaaaaaaaaaaaa
         </li>
     </ul>
     <div id="portfolio_grid" class="blog-masonry">        
-         {% for post in site.posts %}
-            <figure class="item" data-groups='["all"{% for category in post.categories %}, "{{ category }}"{% endfor %}]'>
-                <div class="blog-card">
-                    <div class="post-info">
-                        <a href="{{post.url}}">
-                            <h4 class="blog-item-title">{{ post.title }}</h4>
-                        </a>
-                        <ul class="category">
-                            {% for tag in post.tags %}
-                            <li><a>{{tag}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+        {% for post in site.posts %}
+        <figure class="item" data-groups='["all"{% for category in post.categories %}, "{{ category }}"{% endfor %}]'>
+            <div class="blog-card">
+                <div class="post-date">
+                    <span class="day">6</span>
+                    <span class="month">Dec</span>
+                    <span class="year">2016</span>
                 </div>
-            </figure>
-         {% endfor %}
-         <!-- End of Blog Post 3 -->
+                <div class="post-info">
+                    <a href="{{post.url}}">
+                        <h4 class="blog-item-title">{{ post.title }}</h4>
+                    </a>
+                    <ul class="category">
+                        {% for tag in post.tags %}
+                        <li><a>{{tag}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </figure>
+        {% endfor %}
+        <!-- End of Blog Post 3 -->
         <!-- End of Blog Post 3 -->
     </div>
 </section>
