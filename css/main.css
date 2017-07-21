@@ -1341,7 +1341,7 @@ ul.social-links li:last-child a {
 }
 
 .blog-masonry .item {
-    width: 50%;
+    width: 100%;
     float: left;
     padding: 1em;
 }
