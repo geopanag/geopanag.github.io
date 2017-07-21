@@ -37,33 +37,28 @@
             {% include header.html %}
             <!-- Main Content -->
             <div id="main" class="site-main">
-        <div class="page-wrapper">
-            <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+                <div class="page-wrapper">
+                    <a class="blog-back-button" href="index.html#blog"><i class="fa fa-angle-left"></i></a>
+                    <div class="blog-post-content">
+                        <h1>{{ page.title }}</h1>
+                        <ul class="tags">
+                            <li><a>HTML5</a></li>
+                            <li><a>CSS3</a></li>
+                            <li><a>jQuery</a></li>
+                            <li><a>Ajax</a></li>
+                            <li><a>PHP5</a></li>
+                        </ul>
+                        {{ content }}
 
-            <div class="blog-post-main-image">
-                <img class="post-image img-responsive" src="images/blog/blog_post_2_full.jpg" alt="blog-post-1"/>
-            </div>
+                        <div class="post-info">
+                            <span class="autor"><i class="fa fa-fw fa-user"></i>George Panagopoulos</span>
+                            <span class="divider">|</span>
+                            <span class="date"><i class="fa fa-fw fa-clock-o"></i>21 July, 2017</span>
+                        </div>
+                    </div>
 
-            <div class="blog-post-content">
-                <h1>{{ page.title }}</h1>
-                <ul class="tags">
-                    <li><a>HTML5</a></li>
-                    <li><a>CSS3</a></li>
-                    <li><a>jQuery</a></li>
-                    <li><a>Ajax</a></li>
-                    <li><a>PHP5</a></li>
-                </ul>
-                {{ content }}
-
-                <div class="post-info">
-                    <span class="autor"><i class="fa fa-fw fa-user"></i>George Panagopoulos</span>
-                    <span class="divider">|</span>
-                    <span class="date"><i class="fa fa-fw fa-clock-o"></i>21 July, 2017</span>
                 </div>
             </div>
-
-        </div>
-    </div>
             <!-- /Main Content -->
         </div>
 
