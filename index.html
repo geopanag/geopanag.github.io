@@ -559,6 +559,22 @@ title: aaaaaaaaaaaaa
                 </div>
             </div>
         </figure>
+        
+         {% for post in site.posts %}
+        <figure class="item" data-groups='["all", "abstract"]'>
+            <div class="blog-card">
+                
+                <div class="post-info">
+                    <ul class="category">
+                        <li><a href="#">Graphs</a></li>
+                    </ul>
+                    <a href="blog-post-1.html">
+                        <h4 class="blog-item-title">Lorem ipsum dolor sit amet</h4>
+                    </a>
+                </div>
+            </div>
+        </figure>
+         {% endfor %}
         <!-- End of Blog Post 3 -->
     </div>
 </section>
