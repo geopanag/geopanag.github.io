@@ -514,58 +514,15 @@ title: aaaaaaaaaaaaa
             <a class="filter btn btn-sm btn-link" data-group="abstract">Abstract</a>
         </li>
     </ul>
-    <div id="portfolio_grid" class="blog-masonry">
-        <!-- Blog Post 1 -->
-        <figure class="item" data-groups='["all", "basic"]'>
-            <div class="blog-card">
-                <div class="post-info">
-                    <ul class="category">
-                        <li><a href="#">Time series</a></li>
-                    </ul>
-                    <a href="blog-post-1.html">
-                        <h4 class="blog-item-title">Curabitur augue augue, scelerisque sit amet varius eget, tristique at nisl</h4>
-                    </a>
-                </div>
-            </div>
-        </figure>
-        <!-- End of Blog Post 1 -->
-
-        <!-- Blog Post 2 -->
-        <figure class="item" data-groups='["all", "advanced"]'>
-            <div class="blog-card">
-                <div class="post-info">
-                    <ul class="category">
-                        <li><a href="#">Natural language</a></li>
-                    </ul>
-                    <a href="blog-post-1.html">
-                        <h4 class="blog-item-title">Vivamus volutpat auctor metus, venenatis ornare mi dictum sit amet</h4>
-                    </a>
-                </div>
-            </div>
-        </figure>
-        <!-- End of Blog Post 2 -->
-
-        <!-- Blog Post 3 -->
-        <figure class="item" data-groups='["all", "abstract"]'>
-            <div class="blog-card">
-                
-                <div class="post-info">
-                    <ul class="category">
-                        <li><a href="#">Graphs</a></li>
-                    </ul>
-                    <a href="blog-post-1.html">
-                        <h4 class="blog-item-title">Lorem ipsum dolor sit amet</h4>
-                    </a>
-                </div>
-            </div>
-        </figure>
-        
+    <div id="portfolio_grid" class="blog-masonry">        
          {% for post in site.posts %}
             <figure class="item" data-groups='[all, {{ post.category }}]'>
                 <div class="blog-card">
                     <div class="post-info">
                         <ul class="category">
-                            <li><a href="#">{{ post.category }}</a></li>
+                            {% for tag in post.tags %}
+                            <li><a>{{tag}}</a></li>
+                            {% endfor %}
                         </ul>
                         <a href="{{post.url}}">
                             <h4 class="blog-item-title">{{ post.title }}</h4>
