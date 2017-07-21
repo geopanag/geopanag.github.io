@@ -1336,6 +1336,11 @@ ul.social-links li:last-child a {
 7.5. Blog subpage
 ======================================= */
 /* Blog */
+
+.blog-post-main-image {
+    height: 100px;
+}
+
 .blog-masonry {
     margin: 0 -1em;
 }
