@@ -40,16 +40,13 @@
                 <div class="page-wrapper">
                     <a class="blog-back-button" href="/index.html#blog"><i class="fa fa-angle-left"></i></a>
                     <div class="blog-post-main-image">
-                        <img class="post-image img-responsive" alt="blog-post-1"/>
                     </div>
                     <div class="blog-post-content">
                         <h1>{{ page.title }}</h1>
                         <ul class="tags">
-                            <li><a>HTML5</a></li>
-                            <li><a>CSS3</a></li>
-                            <li><a>jQuery</a></li>
-                            <li><a>Ajax</a></li>
-                            <li><a>PHP5</a></li>
+                            {% for tag in page.tags %}
+                            <li><a>{{tag}}</a></li>
+                            {% endfor %}
                         </ul>
                         {{ content }}
 
