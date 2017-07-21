@@ -519,9 +519,9 @@ title: aaaaaaaaaaaaa
         <figure class="item" data-groups='["all"{% for category in post.categories %}, "{{ category }}"{% endfor %}]'>
             <div class="blog-card">
                 <div class="post-date">
-                    <span class="day">{{ post.date | date: "%-d"}}</span>
-                    <span class="month">{{ post.date | date: "%b}}</span>
-                    <span class="year">{{ post.date | date: "%Y"}}</span>
+                    <span class="day">{{ post.date | date: "%-d" }}</span>
+                    <span class="month">{{ post.date | date: "%b" }}</span>
+                    <span class="year">{{ post.date | date: "%Y" }}</span>
                 </div>
                 <div class="post-info">
                     <a href="{{post.url}}">
