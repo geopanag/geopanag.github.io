@@ -561,14 +561,14 @@ title: aaaaaaaaaaaaa
         </figure>
         
          {% for post in site.posts %}
-            <figure class="item" data-groups='["all", "abstract"]'>
+            <figure class="item" data-groups='[all, {{ post.category }}]'>
                 <div class="blog-card">
                     <div class="post-info">
                         <ul class="category">
-                            <li><a href="#">Graphs</a></li>
+                            <li><a href="#">{{ post.category }}</a></li>
                         </ul>
-                        <a href="blog-post-1.html">
-                            <h4 class="blog-item-title">Lorem ipsum dolor sit amet</h4>
+                        <a href="{{post.url}}">
+                            <h4 class="blog-item-title">{{ post.title }}</h4>
                         </a>
                     </div>
                 </div>
