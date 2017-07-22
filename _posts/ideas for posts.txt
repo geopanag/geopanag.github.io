@@ -1,0 +1,8 @@
+an eigenvaluable post (or the (eigen)value of linear algebra)
+It s called principal for a reason
+a page for pagerank
+graphs have spectrum too and it's awesome
+kinda how a brain computer interface work
+Pearson ,least squares, bias variance
+Linear discriminant analysis and common spatial patterns
+Market network bargaining
