@@ -554,11 +554,20 @@ p.site-description {
     margin: 10px 0;
 }
 
+ul.copyright {
+    display: block;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
 /* Social links */
 ul.social-links {
     display: block;
     list-style: none;
-    margin: 40px 0 0;
+    margin: 15px 0 0;
     padding: 0;
     text-align: center;
 }
