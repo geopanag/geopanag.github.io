@@ -61,14 +61,14 @@ Unfortunately the school, which I heard was amazing, run in parallel with the sa
 [Leman Akoglu](http://www.andrew.cmu.edu/user/lakoglu/) gave two invited talks during the satellites.        
 The first talk was about semi-supervised learning using the underlying network of the data. The motivation behind expressing the data manifold as a network, is to assign unlabeled samples to classes with locally similar samples. To construct the network, the proposed method learns the optimum radius in each dimension, such that when drawing edges using kNN based on that radius, the classification improves. The [algorithm](https://github.com/LingxiaoShawn/PG-Learn) is formalized as a learning-to-rank objective function optimized by gradient descent. To accelerate hyperparameter tuning, the authors employed a parallel implementation of successive halving, where the threads can be allocated depending on the course of the search. Tested on semi-supervised image classification with 10% labeled data, the method beats the rest graph construction methods in famous datasets such as MNIST, COIL etc.
 
- <center><img src="netsci18/akoglu_ssl1.jpg" width="30%">   <img src="netsci18/akoglu_ssl2.jpg" width="30%"> </center>    
+ <center><img src="images/netsci18/akoglu_ssl1.jpg" width="30%">   <img src="images/netsci18/akoglu_ssl2.jpg" width="30%"> </center>    
 
 ### Normality for Attributed Networks
 Most of the web networks can include node attributes, however, they are frequently overlooked because of the extra complexity. 
 Prof. Akoglu's second presentation was on anomaly detection for supgraphs in attributed networks. Along with [Bryan Perozzi](http://www.perozzi.net/#sectionAbout), they devised a [normality measure](http://www.perozzi.net/projects/amen/) for attributed subgraphs, that combines structural density and attribute cohesiveness. It also takes into account boundary connections to hubs that do not really belong to the subgraph. By maximizing normality, one can recover the latent weights of a subgraph in the attribute space, so you can say things like "this community likes these stuff". This metric can be used for effective [summarization](https://dl.acm.org/citation.cfm?id=3139241) and [subgraph characterization](http://www3.cs.stonybrook.edu/~arezaei/project/amen_char.html).The latter was applied to a network of congressmen with attributes based on the policy areas of the bills they sponsor, and came up with the results below. 
 
- <center><img src="netsci18/attributed_1.PNG" width="40%"> 
-<img src="netsci18/attributed_3.PNG" width="40%"> </center>
+ <center><img src="images/netsci18/attributed_1.PNG" width="40%"> 
+<img src="images/netsci18/attributed_3.PNG" width="40%"> </center>
      
 
 
