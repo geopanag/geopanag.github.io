@@ -67,7 +67,7 @@ The first talk was about semi-supervised learning using the underlying network o
 Most of the web networks can include node attributes, however, they are frequently overlooked because of the extra complexity. 
 Prof. Akoglu's second presentation was on anomaly detection for supgraphs in attributed networks. Along with [Bryan Perozzi](http://www.perozzi.net/#sectionAbout), they devised a [normality measure](http://www.perozzi.net/projects/amen/) for attributed subgraphs, that combines structural density and attribute cohesiveness. It also takes into account boundary connections to hubs that do not really belong to the subgraph. By maximizing normality, one can recover the latent weights of a subgraph in the attribute space, so you can say things like "this community likes these stuff". This metric can be used for effective [summarization](https://dl.acm.org/citation.cfm?id=3139241) and [subgraph characterization](http://www3.cs.stonybrook.edu/~arezaei/project/amen_char.html).The latter was applied to a network of congressmen with attributes based on the policy areas of the bills they sponsor, and came up with the results below. 
 
- <center><img src=url(images/netsci18/attributed_1.PNG) width="40%"> 
+ <center><img src=images/netsci18/attributed_1.PNG width="40%"> 
 <img src="images/netsci18/attributed_3.PNG" width="40%"> </center>
      
 
