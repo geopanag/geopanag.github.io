@@ -61,14 +61,14 @@ Unfortunately the school, which I heard was amazing, run in parallel with the sa
 [Leman Akoglu](http://www.andrew.cmu.edu/user/lakoglu/) gave two invited talks during the satellites.        
 The first talk was about semi-supervised learning using the underlying network of the data. The motivation behind expressing the data manifold as a network, is to assign unlabeled samples to classes with locally similar samples. To construct the network, the proposed method learns the optimum radius in each dimension, such that when drawing edges using kNN based on that radius, the classification improves. The [algorithm](https://github.com/LingxiaoShawn/PG-Learn) is formalized as a learning-to-rank objective function optimized by gradient descent. To accelerate hyperparameter tuning, the authors employed a parallel implementation of successive halving, where the threads can be allocated depending on the course of the search. Tested on semi-supervised image classification with 10% labeled data, the method beats the rest graph construction methods in famous datasets such as MNIST, COIL etc.
 
- <center><img src="akoglu_ssl1.jpg" width="30%">   <img src="akoglu_ssl2.jpg" width="30%"> </center>    
+ <center><img src="/images/akoglu_ssl1.jpg" width="30%">   <img src="/images/akoglu_ssl2.jpg" width="30%"> </center>    
 
 ### Normality for Attributed Networks
 Most of the web networks can include node attributes, however, they are frequently overlooked because of the extra complexity. 
 Prof. Akoglu's second presentation was on anomaly detection for supgraphs in attributed networks. Along with [Bryan Perozzi](http://www.perozzi.net/#sectionAbout), they devised a [normality measure](http://www.perozzi.net/projects/amen/) for attributed subgraphs, that combines structural density and attribute cohesiveness. It also takes into account boundary connections to hubs that do not really belong to the subgraph. By maximizing normality, one can recover the latent weights of a subgraph in the attribute space, so you can say things like "this community likes these stuff". This metric can be used for effective [summarization](https://dl.acm.org/citation.cfm?id=3139241) and [subgraph characterization](http://www3.cs.stonybrook.edu/~arezaei/project/amen_char.html).The latter was applied to a network of congressmen with attributes based on the policy areas of the bills they sponsor, and came up with the results below. 
 
  <center><img src="/images/netsci18/attributed_1.PNG" width="40%"> 
-<img src="images/netsci18/attributed_3.PNG" width="40%"> </center>
+<img src="/images/netsci18/attributed_3.PNG" width="40%"> </center>
      
 
 
@@ -77,14 +77,14 @@ Prof. Akoglu's second presentation was on anomaly detection for supgraphs in att
 How to model networks that change in time is an open problem that was addressed by many presentations in the NetSci. [Ingo Scholtes](http://www.ingoscholtes.net/), who is known for his work on [higher order networks](https://arxiv.org/abs/1806.05977), presented two contributed talks during the satellites and one on the last day of the conference addressing this issue. His study contends that temporal networks should be addressed as a generative model for pathways, to account for non-markovian characteristics that are ubiquitous on most real-life networks. The idea is that retaining the order of the edges in the analysis may uncover latent causal relationships that would be overlooked otherwise. Prof. Scholtes' research reveals that analyzing a temporal network as a Higher Order Network (a hypergraph with short paths as nodes), can uncover meaningful patterns. 
 There are two main shortcomings of this approach. The first is how to decide the optimal order of the network, and the second is how to take into consideration the actual underlying time between the edges. In other words, what is the length of the temporal paths that makes the analysis meaningful, and at what time range a path stops representing a causal relationship. Solutions to both have been proposed based on the entropy of the network in different orders and time scales, but there is still a considerable amount of ideas to explore.  
 
-<center><img src="netsci18/scholtes_1.jpg" width="30%">   <img src="netsci18/scholtes_2.jpg" width="30%"> <img src="netsci18/scholtes_3.jpg" width="30%"></center>
+<center><img src="/images/netsci18/scholtes_1.jpg" width="30%">   <img src="/images/netsci18/scholtes_2.jpg" width="30%"> <img src="/images/netsci18/scholtes_3.jpg" width="30%"></center>
 
 ### Temporal Networks as Event Graphs
 
 A temporal network can also be represented as a graph of events. Each edge in time is a unique event and is represented by a node in the event graph. A directed link corresponds to two adjacent events in time. The edges can be weighted based on the inter-event time, as in [Marton Karsai's](http://perso.ens-lyon.fr/marton.karsai/) presentation, or labeled based on the inter-event time and the type of temporal motif they form, as in [Andrew Mellor's](https://andrewmellor.co.uk/). This representation facilitates the investigation  of several patterns of a diffusion process. Some [examples](https://arxiv.org/pdf/1706.02128.pdf) are the time distribution for certain temporal motifs and the size of temporal components in different inter-event time scales.
 It also facilitates examining [phase transitions](https://arxiv.org/pdf/1709.05647.pdf) of spreading processes on different thresholds of inter-event times, which in turn can shed light to which nodes contribute more to the contagion. Overall, event graphs are a rather exciting approach to analyze temporal networks that surely calls for further studying.
 
-<center><img src="netsci18/mellor_1.jpg" width="30%">   <img src="netsci18/karsai_2.jpg" width="30%"> <img src="netsci18/karsai_3.jpg" width="30%"></center>
+<center><img src="/images/netsci18/mellor_1.jpg" width="30%">   <img src="/images/netsci18/karsai_2.jpg" width="30%"> <img src="/images/netsci18/karsai_3.jpg" width="30%"></center>
 
 
 
@@ -105,7 +105,7 @@ The first [work](https://arxiv.org/pdf/1712.08948) argues that stationary Μarko
 The final [presentation](https://arxiv.org/abs/1708.01432) was about stochastic block models for weighted networks. The weights are introduced to the standard SBM as covariates conditioned on the group structure. By employing microcanonical versions of the weights' distributions, the model allows expressing various types of continuous and discrete weights. 
 The model's usefulness is exhibited in the analysis of migration, Congress votes, and brain networks. 
 
-<center><img src="netsci18/peixoto_1.jpg" width="30%">   <img src="netsci18/peixoto_3.jpg" width="30%"></center>  
+<center><img src="/images/netsci18/peixoto_1.jpg" width="30%">   <img src="/images/netsci18/peixoto_3.jpg" width="30%"></center>  
 
 
 
@@ -122,7 +122,7 @@ This method was employed to analyze a network of universities, where a directed 
 
 * [Austin Benson](https://www.cs.cornell.edu/~arb/) suggests that local clustering coefficients should not be limited to triangles. His [work](https://www.cs.cornell.edu/~arb/papers/higher-order-clustering-PRE-2018.pdf) on extending traditional graph clustering metrics to include higher order information, indicates that numerous real-world networks exhibit forms of clustering that go beyond triadic closure. 
 
-<center><img src="netsci18/benson_1.jpg" width="30%">   <img src="netsci18/benson_2.jpg" width="30%" ></center>
+<center><img src="/images/netsci18/benson_1.jpg" width="30%">   <img src="/images/netsci18/benson_2.jpg" width="30%" ></center>
 
 
 * [Bruno Ribeiro](https://www.cs.purdue.edu/homes/ribeirob/) proposes a method to predict connections between subgraphs in time evolving networks. The [Sugraph Pattern Neural Network](https://www.cs.purdue.edu/homes/ribeirob/pdf/Meng_SPNN_AAAI2018.pdf) takes as input a higher order network and predicts future links. In this HON, each node is a subgraph of the initial network and an edge is defined based on the node overlapping between the two subgraphs.
@@ -131,7 +131,7 @@ This method was employed to analyze a network of universities, where a directed 
 
 * [Victor Veitch](http://victorveitch.com/) from Columbia, presented a methodology to express empirical risk minimization (ERM) in the context of graph learning. [Relational ERM](http://www.victorveitch.com/assets/pdfs/relational_ERM.pdf) leverages on sampling techniques to address the theoretical hinders of statistical learning for graphs, and has a state of the art performance in semi-supervised node classification.
 
-<center><img src="netsci18/veitch_1.jpg" width="30%">   <img src="netsci18/veitch_2.jpg" width="30%"></center>
+<center><img src="/images/netsci18/veitch_1.jpg" width="30%">   <img src="/images/netsci18/veitch_2.jpg" width="30%"></center>
 
 * [Nynke Niezink](http://www.stat.cmu.edu/people/faculty/nynke-niezink) 
  modeled a temporal social network with nodal attributes using a continuous-time Markovian state space model. She demonstrated the effectiveness of the model with a cool analysis on the role of low self esteem on being influenced to drink alcohol.
@@ -142,7 +142,7 @@ This method was employed to analyze a network of universities, where a directed 
 
 * [David Choi](https://www.heinz.cmu.edu/faculty-research/profiles/choi-david) presented a [statistical model](http://www.pnas.org/content/early/2018/01/10/1718449115) that uses a smoothing technique on the spectrum of a temporal network, to identify when the communities change or their structure is prolonged. The effectiveness of the method is tested on a genomics dataset. 
 
-<center><img src="netsci18/choi_2.jpg" width="30%">   <img src="netsci18/choi_3.jpg" width="30%"></center>
+<center><img src="/images/netsci18/choi_2.jpg" width="30%">   <img src="/images/netsci18/choi_3.jpg" width="30%"></center>
 
 
 * [Sean Cornelius](https://www.barabasilab.com/people/sean-p-cornelius) presented a [study](https://arxiv.org/abs/1607.06168) on the controlability of temporal networks. The analytical results, which are backed up by experimental observations, indicate that temporal networks can be controlled faster and easier then static ones. Temporality is a blessing in disguise!
