@@ -61,7 +61,7 @@ Unfortunately the school, which I heard was amazing, run in parallel with the sa
 [Leman Akoglu](http://www.andrew.cmu.edu/user/lakoglu/) gave two invited talks during the satellites.        
 The first talk was about semi-supervised learning using the underlying network of the data. The motivation behind expressing the data manifold as a network, is to assign unlabeled samples to classes with locally similar samples. To construct the network, the proposed method learns the optimum radius in each dimension, such that when drawing edges using kNN based on that radius, the classification improves. The [algorithm](https://github.com/LingxiaoShawn/PG-Learn) is formalized as a learning-to-rank objective function optimized by gradient descent. To accelerate hyperparameter tuning, the authors employed a parallel implementation of successive halving, where the threads can be allocated depending on the course of the search. Tested on semi-supervised image classification with 10% labeled data, the method beats the rest graph construction methods in famous datasets such as MNIST, COIL etc.
 
- <center><img src="/images/akoglu_ssl1.jpg" width="30%">   <img src="/images/akoglu_ssl2.jpg" width="30%"> </center>    
+ <center><img src="/images/netsci18/akoglu_ssl1.jpg" width="30%">   <img src="/images/netsci18/akoglu_ssl2.jpg" width="30%"> </center>    
 
 ### Normality for Attributed Networks
 Most of the web networks can include node attributes, however, they are frequently overlooked because of the extra complexity. 
