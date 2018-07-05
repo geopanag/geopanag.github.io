@@ -20,6 +20,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 1. Preconference 
 	- Brainhack Networks
 	- SYNS pre-event 
+	
 3. Satellites
 	- Semi-Supervised Learning through Graphs
 	- Normality for Attributed Networks
