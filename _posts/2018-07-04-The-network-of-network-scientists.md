@@ -33,7 +33,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 4. Other interesting talks <br>		
 5. Conclusion
 
-<!---
+
 <ol>
   <li>Preconference
 	<ul>
@@ -59,7 +59,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
   <li>Other interesting talks</li>
   <li>Conclusion</li>
 </ol>
---->
+
 <!---
 ## Alternative intro (in case the other one is too cheesy)
 My moving to Paris kicked off with the attendance of the 13th International Conference on Network Science, or [NetSci](https://www.netsci2018.com/). Though the majority of the participants have physics background, it is highly interdisciplinary and has a relative balance between applications and theory. In other words, a great place for an aspiring graph miner to hear tons of different perspectives, while presenting his [poster](https://giorgospanagopoulos.github.io/pdf/neural_network_inference_poster.pdf).     
