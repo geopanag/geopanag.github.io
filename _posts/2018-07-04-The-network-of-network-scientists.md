@@ -15,7 +15,7 @@ Next morning, I realized that my studio in Palaiseau is 1 hour away from the ven
 As a first-timer to the city of love, I was not familiar with the lack of english-speaking and the daedal public transportation network. Relying on extremely amateur sign language and my rusty running skills, I managed to get to Massy, then Denfert-Rochereau, then Chevaleret, and eventually to the grandiose entrance of the ICM institute for Brain and Spinal Cord right on time for registration...and breakfast.
 
 
-
+<!---
 ## Contents
 
 1. Preconference
@@ -36,7 +36,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 4. Other interesting talks
 
 5. Conclusion
- 
+-->
 <dl>
 <ol type="1">
   <li>Preconference
