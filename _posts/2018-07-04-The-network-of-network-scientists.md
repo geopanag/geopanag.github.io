@@ -20,16 +20,16 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 1. Preconference <br>	
 	- Brainhack Networks
-    - SYNS pre-event
+    - SYNS pre-event<br>
 2. Satellites <br>	
     - Semi-Supervised Learning through Graphs
     - Normality for Attributed Networks
     - Temporal Networks as HONs
-    - Temporal Networks as Event Graphs
+    - Temporal Networks as Event Graphs<br>
 3. Main  Conference <br>	
     - Spread of Misinformation in Social Media
     - Bayesian Learning in Graphs
-    - Time-dependent Centrality
+    - Time-dependent Centrality<br>
 4. Other interesting talks <br>		
 5. Conclusion
 
