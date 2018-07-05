@@ -42,7 +42,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
   </li>
   <li>Other interesting talks</li>
   <li>Conclusion</li>
-</ul>
+</ol>
 
 
 <!---
