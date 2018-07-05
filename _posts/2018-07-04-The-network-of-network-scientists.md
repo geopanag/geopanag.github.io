@@ -18,6 +18,25 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 ## Contents
 
+1. Preconference
+	- Brainhack Networks
+	- SYNS pre-event
+
+2. Satellites
+	- Semi-Supervised Learning through Graphs
+	- Normality for Attributed Networks
+	- Temporal Networks as HONs
+	- Temporal Networks as Event Graphs
+
+3. Main  Conference
+	- Spread of Misinformation in Social Media
+	- Bayesian Learning in Graphs
+	- Time-dependent Centrality
+    
+4. Other interesting talks
+5. Conclusion
+ 
+<!---
 <ol type="1">
   <li>Preconference
 	<ul>
@@ -43,7 +62,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
   <li>Other interesting talks</li>
   <li>Conclusion</li>
 </ol>
-
+--->
 
 <!---
 ## Alternative intro (in case the other one is too cheesy)
@@ -79,6 +98,7 @@ The first talk was about semi-supervised learning using the underlying network o
 
  <center><img src="/images/netsci18/akoglu_ssl1.jpg" width="20%">   <img src="/images/netsci18/akoglu_ssl2.jpg" width="20%"> </center>    
 <br><br>
+
 ### Normality for Attributed Networks
 Most of the web networks can include node attributes, however, they are frequently overlooked because of the extra complexity. 
 Prof. Akoglu's second presentation was on anomaly detection for supgraphs in attributed networks. Along with [Bryan Perozzi](http://www.perozzi.net/#sectionAbout), they devised a [normality measure](http://www.perozzi.net/projects/amen/) for attributed subgraphs, that combines structural density and attribute cohesiveness. It also takes into account boundary connections to hubs that do not really belong to the subgraph. By maximizing normality, one can recover the latent weights of a subgraph in the attribute space, so you can say things like "this community likes these stuff". This metric can be used for effective [summarization](https://dl.acm.org/citation.cfm?id=3139241) and [subgraph characterization](http://www3.cs.stonybrook.edu/~arezaei/project/amen_char.html). The latter was applied to a network of congressmen with attributes based on the policy areas of the bills they sponsor, and came up with the results below. 
@@ -95,6 +115,7 @@ There are two main shortcomings of this approach. The first is how to decide the
 
 <center><img src="/images/netsci18/scholtes_1.jpg" width="30%">   <img src="/images/netsci18/scholtes_2.jpg" width="30%"> <img src="/images/netsci18/scholtes_3.jpg" width="30%"></center>
 <br><br>
+
 ### Temporal Networks as Event Graphs
 
 A temporal network can also be represented as a graph of events. Each edge in time is a unique event and is represented by a node in the event graph. A directed link corresponds to two adjacent events in time. The edges can be weighted based on the inter-event time, as in [Marton Karsai's](http://perso.ens-lyon.fr/marton.karsai/) presentation, or labeled based on the inter-event time and the type of temporal motif they form, as in [Andrew Mellor's](https://andrewmellor.co.uk/). This representation facilitates the investigation  of several patterns of a diffusion process. Some [examples](https://arxiv.org/pdf/1706.02128.pdf) are the time distribution for certain temporal motifs and the size of temporal components in different inter-event time scales.
@@ -125,7 +146,7 @@ The model's usefulness is exhibited in the analysis of migration, Congress votes
 <br><br>
 
 
-### Time Dependent Centrality
+### Time-dependent Centrality
 [Mason Porter](https://www.math.ucla.edu/~mason/) gave an insightful keynote talk about a new measure of centrality for temporal networks. The [presentation](https://www.slideshare.net/masonporter/centrality-in-time-dependent-networks) started with a brief review of the various centrality measures employed in network science, separating between those that are based on the graph's spectrum and the rest. 
 Subsequently, Prof. Porter expressed the centrality of a temporal network binned in time windows as a supra-centrality matrix, following the multi-layer representation described in [Taylor et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5643020/). The estimated time-independent centrality is computed through an involved singular perturbation expansion. 
 This method was employed to analyze a network of universities, where a directed edge indicates a PhD student getting hired from a university after graduating from another. Using data from the [mathematics genealogy project](https://www.genealogy.math.ndsu.nodak.edu/), MIT was found by far the most central. On a related note, a [framework](https://arxiv.org/abs/1805.00193) to analyze temporal networks taking into consideration the actual underlying time was introduced. The key idea is to distinguish between the individual interactions which are instantaneous and the actual bonds which remain but change in time. In this framework, the bonds decay exponentially in time and increase incrementally with interactions. A time-dependent version of page-rank is developed that uses an adjacency-decay matrix and is computed through power iteration. Prof. Porter summed up by underlying the importance of taking into account the actual time when analyzing networks. After a question from the audience, he also pointed out on the usefulness of Hawkes processes. I was wondering why this model was somewhat underrepresented in NetSci, as it has been employed in several great works in network analysis lately, two examples being [Linderman et al.](http://proceedings.mlr.press/v32/linderman14.pdf) and [De et al.](https://people.mpi-sws.org/~manuelgr/pubs/opinions-nips16-main.pdf). 
