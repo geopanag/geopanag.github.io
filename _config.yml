@@ -1,4 +1,4 @@
 name: George Panagopoulos
-markdown: RDiscount
+markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title
 theme: jekyll-theme-slate
