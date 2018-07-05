@@ -15,52 +15,47 @@ Next morning, I realized that my studio in Palaiseau is 1 hour away from the ven
 As a first-timer to the city of love, I was not familiar with the lack of english-speaking and the daedal public transportation network. Relying on extremely amateur sign language and my rusty running skills, I managed to get to Massy, then Denfert-Rochereau, then Chevaleret, and eventually to the grandiose entrance of the ICM institute for Brain and Spinal Cord right on time for registration...and breakfast.
 
 
-<!---
+
 ## Contents
 
 1. Preconference
-	- Brainhack Networks
-	- SYNS pre-event
-
+    - Brainhack Networks
+    - SYNS pre-event
 2. Satellites
-	- Semi-Supervised Learning through Graphs
-	- Normality for Attributed Networks
-	- Temporal Networks as HONs
-	- Temporal Networks as Event Graphs
-
+    - Semi-Supervised Learning through Graphs
+    - Normality for Attributed Networks
+    - Temporal Networks as HONs
+    - Temporal Networks as Event Graphs
 3. Main  Conference
-	- Spread of Misinformation in Social Media
-	- Bayesian Learning in Graphs
-	- Time-dependent Centrality
-    
+    - Spread of Misinformation in Social Media
+    - Bayesian Learning in Graphs
+    - Time-dependent Centrality
 4. Other interesting talks
-
 5. Conclusion
--->
+
 <ol>
   <li>Preconference
 	<ul>
-    <li>Brainhack Networks</li>
-    <li>SYNS pre-event </li>
+    	<li>Brainhack Networks</li>
+    	<li>SYNS pre-event </li>
     </ul>
   </li>
   <li>Satellites
     <ul>
-    <li>Semi-Supervised Learning through Graphs</li>
-    <li>Normality for Attributed Networks</li>
-	<li>Temporal Nets as HONs</li>
-	<li>Temporal Nets as Event Graphs</li>
+    	<li>Semi-Supervised Learning through Graphs</li>
+    	<li>Normality for Attributed Networks</li>
+		<li>Temporal Nets as HONs</li>
+		<li>Temporal Nets as Event Graphs</li>
     </ul>
   </li>
   <li>Main Conference
 	<ul>
-    <li>Spread of Misinformation in Social Media</li>
-    <li>Bayesian Learning in Graphs</li>
-	<li>Time-dependent Centrality</li>
+    	<li>Spread of Misinformation in Social Media</li>
+    	<li>Bayesian Learning in Graphs</li>
+		<li>Time-dependent Centrality</li>
 	</ul>
   </li>
   <li>Other interesting talks</li>
-  <ul></ul>
   <li>Conclusion</li>
 </ol>
 
