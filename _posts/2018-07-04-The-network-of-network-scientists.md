@@ -37,8 +37,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 5. Conclusion
 -->
-<dl>
-<ol type="1">
+<ol>
   <li>Preconference
 	<ul>
     <li>Brainhack Networks</li>
@@ -61,9 +60,9 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 	</ul>
   </li>
   <li>Other interesting talks</li>
+  <ul></ul>
   <li>Conclusion</li>
 </ol>
-</dl>
 
 <!---
 ## Alternative intro (in case the other one is too cheesy)
