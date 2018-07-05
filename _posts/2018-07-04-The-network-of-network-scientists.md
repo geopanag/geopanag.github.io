@@ -37,7 +37,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 5. Conclusion
  
-<!---
+<dl>
 <ol type="1">
   <li>Preconference
 	<ul>
@@ -63,7 +63,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
   <li>Other interesting talks</li>
   <li>Conclusion</li>
 </ol>
---->
+</dl>
 
 <!---
 ## Alternative intro (in case the other one is too cheesy)
