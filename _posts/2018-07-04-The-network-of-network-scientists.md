@@ -35,22 +35,19 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 
 <ol>
-  <li>Preconference
-	<ul>
+  <li>Preconference<ul>
     	<li>Brainhack Networks</li>
     	<li>SYNS pre-event </li>
     </ul>
   </li>
-  <li>Satellites
-    <ul>
+  <li>Satellites<ul>
     	<li>Semi-Supervised Learning through Graphs</li>
     	<li>Normality for Attributed Networks</li>
 		<li>Temporal Nets as HONs</li>
 		<li>Temporal Nets as Event Graphs</li>
     </ul>
   </li>
-  <li>Main Conference
-	<ul>
+  <li>Main Conference<ul>
     	<li>Spread of Misinformation in Social Media</li>
     	<li>Bayesian Learning in Graphs</li>
 		<li>Time-dependent Centrality</li>
