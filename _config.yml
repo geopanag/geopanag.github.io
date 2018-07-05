@@ -1,5 +1,4 @@
 name: George Panagopoulos
 markdown: RDiscount
 permalink: /blog/:year/:month/:day/:title
-
 theme: jekyll-theme-slate
