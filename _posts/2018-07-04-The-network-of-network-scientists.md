@@ -18,7 +18,7 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 ## Contents
 
-1. "Preconference"
+1. "Preconference "
 	- Brainhack Networks
     - SYNS pre-event
 2. "Satellites"
