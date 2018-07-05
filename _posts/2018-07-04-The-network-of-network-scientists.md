@@ -18,18 +18,18 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
 
 ## Contents
 
-1. Preconference <br>	
+1. Preconference	
 	- Brainhack Networks
-    - SYNS pre-event<br>
-2. Satellites <br>	
+    - SYNS pre-event<br />
+2. Satellites 	
     - Semi-Supervised Learning through Graphs
     - Normality for Attributed Networks
     - Temporal Networks as HONs
-    - Temporal Networks as Event Graphs<br>
-3. Main  Conference <br>	
+    - Temporal Networks as Event Graphs<br />
+3. Main  Conference	
     - Spread of Misinformation in Social Media
     - Bayesian Learning in Graphs
-    - Time-dependent Centrality<br>
+    - Time-dependent Centrality<br />
 4. Other interesting talks <br>		
 5. Conclusion
 
@@ -56,16 +56,6 @@ As a first-timer to the city of love, I was not familiar with the lack of englis
   <li>Other interesting talks</li>
   <li>Conclusion</li>
 </ol>
-
-<!---
-## Alternative intro (in case the other one is too cheesy)
-My moving to Paris kicked off with the attendance of the 13th International Conference on Network Science, or [NetSci](https://www.netsci2018.com/). Though the majority of the participants have physics background, it is highly interdisciplinary and has a relative balance between applications and theory. In other words, a great place for an aspiring graph miner to hear tons of different perspectives, while presenting his [poster](https://giorgospanagopoulos.github.io/pdf/neural_network_inference_poster.pdf).     
-The conference lasts for 5 days officially, but I also participated in a related hackathon and a pre-event that took place during the weekend before. Unfortunately the school, which I heard was amazing, run in parallel with the satellites (e.g. workshops! it wasn't *that* type of physics conference) and in a venue 30 minutes away. I decided to focus on the satellites and attended the Statistical Inference on Networks on Monday and split between Higher Order Networks and Machine learning in Network Science on Tuesday.
- During the main conference, I attended some of the keynotes and the sessions focusing on structure, theory and spreading. 
-Below is a write-up that summarizes the most interesting ideas I came across. --->   
-
-
-
 
 ## Preconference 
 
