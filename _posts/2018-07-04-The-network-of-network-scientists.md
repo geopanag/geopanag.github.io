@@ -3,16 +3,17 @@ layout: post
 title: "The Network of Network Scientists"
 date: 2018-07-04
 category: ["all"]
-tags: ["International Conference", "Network Science", "2018"]
+tags: ["Summary", "International Conference on Network Science", "2018"]
 ---
 
 *George Panagopoulos, 4th of July, 2018*
 
 
-Friday night. I 'm already a couple of days in Paris. I came earlier to become more acquainted with Ecole Polytecnique, towards my internship in [DaSciM](http://www.lix.polytechnique.fr/dascim/).
+Friday night. I 'm already a couple of days in Paris, because I came earlier to become more acquainted with Ecole Polytecnique, towards my internship in [DaSciM](http://www.lix.polytechnique.fr/dascim/).
 I decided to start preparing for the 13th International Conference on Network Science, or [NetSci](https://www.netsci2018.com/), which was about to kick off in a few hours with [Brainhack Networks](http://brainhack-networks.com/venue). Though the majority of the participants have a physics background, NetSci is highly interdisciplinary and achieves a great balance between applications and theory. In other words, a great place for an aspiring graph miner to hear tons of different perspectives, while presenting his [poster](https://giorgospanagopoulos.github.io/pdf/neural_network_inference_poster.pdf).    
 Next morning, I realized that my studio in Palaiseau is 1 hour away from the venues of the conference. All four of them!
-As a first-timer to the city of love, I was not familiar with the lack of english-speaking and the daedal public transportation network. Relying on extremely amateur sign language and my rusty running skills, I managed to get to Massy, then Denfert-Rochereau, then Chevaleret, and eventually to the grandiose entrance of the ICM institute for Brain and Spinal Cord right on time for registration...and breakfast.
+On top of that, I had no mobile internet and ,as a first-timer to the city of love, I was not familiar with the lack of english-speaking and the daedal public transportation network. 
+Relying on extremely amateur sign language and my rusty running skills, I managed to get to Massy, then Denfert-Rochereau, then Chevaleret, and eventually to the grandiose entrance of the ICM institute for Brain and Spinal Cord, right on time for registration...and breakfast.
 
 
 
