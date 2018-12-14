@@ -52,7 +52,7 @@ Prof. [Aris Gionis](https://users.ics.aalto.fi/gionis/) proposes to develop tool
 One approach towards this is managing the diffusion of two opposing campaigns, such that the influence exerted to the nodes will be as balanced as possible. This setting is related to the problem of influence maximization, but instead of choosing the optimum seed set,the aim is to break it into two different sets that can each transmit information from opposing sides. The optimum solution will lead to opposing diffusions that can have an equal effect on all users.
 Another solution is to change the recommendation process in a more direct manner. Assuming that the adoption of an opinion (or an item) in the network follows an independent cascade model, the probability of influence can depend on the item preferences of the user and the respective item being propagated. In this way, one can optimize the propagation such that a user is exposed to all types of items in an equal amount.       
 
-<center><img src="/images/complex18/gionis_1.jpg" width="20%">   <img src="/images/complex18/gionis_2.jpg" width="20%">  <img src="complenet18/gionis_3.jpg" width="20%">
+<center><img src="/images/complex18/gionis_1.jpg" width="20%">   <img src="/images/complex18/gionis_2.jpg" width="20%">  <img src="/images/complex18/gionis_3.jpg" width="20%">
 </center>   
 <br><br>
 
