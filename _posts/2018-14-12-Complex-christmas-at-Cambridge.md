@@ -31,14 +31,14 @@ Dr. [Silvio Lattanzi](https://sites.google.com/site/silviolattanzi/)'s experimen
 Thus, we want to somehow use ego-network clustering to improve the general clustering of the network, and a promising idea towards this is the persona graphs. A persona graph is basically a cluster of a node's egonetwork ,severed from it. A copy of the ego-node is created and connected to the nodes of this cluster, resembling the initial node. Applying this transformation for all clusters of all egonetworks facilitates the integration of the micro-clustering into the network. Subsequently, an overlapping clustering method can produce remarkable results in networks that would be impossible to cluster in their initial forms.     
  
 
-<center><img src="/images/complex18/lattanzi_2.jpg" width="25%">   <img src="/images/complex18/lattanzi_4.jpg" width="25%">  <img src="/images/complex18/lattanzi_6.jpg" width="25%">
+<center><img src="/images/complex18/lattanzi_2.jpg" width="20%">   <img src="/images/complex18/lattanzi_4.jpg" width="20%">  <img src="/images/complex18/lattanzi_6.jpg" width="20%">
 </center>   
 <br><br>
 
 ### Epidemics using metapopulations and mobility history
 After a general intro to epidemiology and compartmental models, Prof. [Jesus Gomez Gardenez](http://complex.unizar.es/~jesus/) presented an adaptation of the SIS model into networks that include additional information such as metapopulations and history of movements of the nodes. More specifically, each node can belong to a certain metapopulation e.g. a person in a city, and can move to other cities but has to come back to its initial city eventually. The model defines the probability of a node being infected based on the distribution of the infected nodes in its metapopulation at a given time step. This probability breaks down to the probability of staying infected and getting infected. The latter is defined based on the typical probability of a node getting by its neighbors. Note that in this way a node might get infected by a certain metapopulation which it is currently in, even if it belongs to another one. This is modeled using the logs of the nodes' mobility, which indicate how a node moved from one metapopulation to another. The results are remarkable because they reveal that movement between metapopulations during an epidemic might actually hinder the epidemic, which comes in contrast with the general belief.
 
-<center><img src="/images/complex18/gomez_1.jpg" width="25%">   <img src="/images/complex18/gomez_3.jpg" width="25%">  <img src="/images/complex18/gomez_5.jpg" width="25%">
+<center><img src="/images/complex18/gomez_1.jpg" width="20%">   <img src="/images/complex18/gomez_3.jpg" width="20%">  <img src="/images/complex18/gomez_5.jpg" width="20%">
 </center>   
 <br><br>
 
@@ -52,7 +52,7 @@ Prof. [Aris Gionis](https://users.ics.aalto.fi/gionis/) proposes to develop tool
 One approach towards this is managing the diffusion of two opposing campaigns, such that the influence exerted to the nodes will be as balanced as possible. This setting is related to the problem of influence maximization, but instead of choosing the optimum seed set,the aim is to break it into two different sets that can each transmit information from opposing sides. The optimum solution will lead to opposing diffusions that can have an equal effect on all users.
 Another solution is to change the recommendation process in a more direct manner. Assuming that the adoption of an opinion (or an item) in the network follows an independent cascade model, the probability of influence can depend on the item preferences of the user and the respective item being propagated. In this way, one can optimize the propagation such that a user is exposed to all types of items in an equal amount.       
 
-<center><img src="/images/complex18/gionis_1.jpg" width="25%">   <img src="/images/complex18/gionis_2.jpg" width="25%">  <img src="complenet18/gionis_3.jpg" width="25%">
+<center><img src="/images/complex18/gionis_1.jpg" width="20%">   <img src="/images/complex18/gionis_2.jpg" width="20%">  <img src="complenet18/gionis_3.jpg" width="20%">
 </center>   
 <br><br>
 
@@ -64,7 +64,7 @@ Last but not least, he presented a framework for analyzing ecological networks, 
 Moreover this approach reveals that too much diversity and mutualism could destabilize an ecosystem.  
 
 
-<center><img src="/images/complex18/makse_2.jpg" width="20%">  <img src="/images/complex18/makse_6.jpg" width="20%">  <img src="/images/complex18/makse_7.jpg" width="20%"> <img src="/images/complex18/makse_10.jpg" width="20%"> 
+<center><img src="/images/complex18/makse_2.jpg" width="15%">  <img src="/images/complex18/makse_6.jpg" width="15%">  <img src="/images/complex18/makse_7.jpg" width="15%"> <img src="/images/complex18/makse_10.jpg" width="15%"> 
 </center>   
 <br><br>
 
@@ -79,7 +79,7 @@ Towards this, prof. Towsley's team performed a classification experiment, using 
 The accuracy increases significantly when the input includes information based on motifs, underlying their role in the network's identity.
 The networks examined through these studies were very small (30 to 2500 nodes). The final part of the lecture addressed the issue of scalability, and the proposed solution is based on a strategic sampling of edges that could lead to unbiased estimates.
 
-<center><img src="/images/complex18/towlsey_2.jpg" width="25%">   <img src="/images/complex18/towlsey_4.jpg" width="30%">  <img src="/images/complex18/towlsey_5.jpg" width="25%">
+<center><img src="/images/complex18/towlsey_2.jpg" width="20%">   <img src="/images/complex18/towlsey_4.jpg" width="20%">  <img src="/images/complex18/towlsey_5.jpg" width="20%">
 </center>   
 <br><br>
 
