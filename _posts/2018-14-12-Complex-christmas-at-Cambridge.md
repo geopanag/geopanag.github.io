@@ -60,8 +60,7 @@ Another solution is to change the recommendation process in a more direct manner
 Prof. [Hernan Makse](http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/)'s presentation was divided in three parts. 
 The first part was theoretical, and described how influence maximization can be approached from the perspective of optimal percolation, which surprisingly identifies as influencers weakly connected nodes that are surrounded by hubs, a case that other heuristics overlook.<br>
 The next part consisted of an analysis of twitter during the 2016 US election. After showing that one could predict the voting intention through tweets, Prof. Makse presented a thorough analysis based on causal relationships between the tweets of different influencers. This uncovered the relationship between certain republican influencers and twitter accounts that are associated with fake news.  
-Last but not least, he presented a framework for analyzing ecological networks, whose steady state relies on the links of the networks' k-core. Intuitively, this means that the stability of an ecosystem relies on the interactions between certain subspecies.  
-Moreover this approach reveals that too much diversity and mutualism could destabilize an ecosystem.  
+Last but not least, he presented a framework for analyzing ecological networks, whose steady state relies on the links of the networks' k-core. Intuitively, this means that the stability of an ecosystem relies on the interactions between certain subspecies. Moreover this approach reveals that too much diversity and mutualism could destabilize an ecosystem.  
 
 
 <center><img src="/images/complex18/makse_2.jpg" width="15%">  <img src="/images/complex18/makse_6.jpg" width="15%">  <img src="/images/complex18/makse_7.jpg" width="15%"> <img src="/images/complex18/makse_10.jpg" width="15%"> 
@@ -76,8 +75,7 @@ The results show that networks do exhibit a significant amount of certain motifs
 Examining the correlation of motifs between networks, we can see that certain patterns are prevalent in specific networks.  
 This motivates the idea to use the motifs for network classification.
 Towards this, prof. Towsley's team performed a classification experiment, using embeddings and features from different types of networks (follow, friendship, advice etc..) as input to strong classifiers such as XGBoost and SVM.
-The accuracy increases significantly when the input includes information based on motifs, underlying their role in the network's identity.
-The networks examined through these studies were very small (30 to 2500 nodes). The final part of the lecture addressed the issue of scalability, and the proposed solution is based on a strategic sampling of edges that could lead to unbiased estimates.
+The accuracy increases significantly when the input includes information based on motifs, underlying their role in the network's identity. The networks examined through these studies were very small (30 to 2500 nodes). The final part of the lecture addressed the issue of scalability, and the proposed solution is based on a strategic sampling of edges that could lead to unbiased estimates.
 
 <center><img src="/images/complex18/towlsey_2.jpg" width="20%">   <img src="/images/complex18/towlsey_4.jpg" width="20%">  <img src="/images/complex18/towlsey_5.jpg" width="20%">
 </center>   
