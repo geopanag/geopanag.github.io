@@ -14,14 +14,9 @@ It is a young but promising conference that comprises mostly of a blend between 
 
 ## Contents
 1. Tutorials 
-	- Egonetwork Analysis
-	- Epidemics 
-4. Keynotes
-    - Network polarization
-	- Fake news and kcore
-	- Network motifs  
-5. Talks
-6. Conclusion
+2. Keynotes
+3. Talks
+4. Conclusion
 
 ## Tutorials 
 
