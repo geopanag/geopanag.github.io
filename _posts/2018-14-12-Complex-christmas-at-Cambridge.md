@@ -9,9 +9,7 @@ tags: ["Complex Networks", "Applications", "2018"]
 *George Panagopoulos, December 14, 2018*
 
 This December I had the chance to visit Cambridge, where the [Complex Networks](https://www.complexnetworks.org/) took place, to present our work on [influence maximization](https://link.springer.com/chapter/10.1007/978-3-030-05411-3_32).
-It is a young but promising conference that comprises mostly of a blend between physics and computer science papers.    
-I attended the tutorials, keynotes and the sessions on epidemics and machine learning.
-Below is a write-up that summarizes the most interesting ideas I came across.   
+It is a young but promising conference that comprises mostly of a blend between physics and computer science papers. I attended the tutorials, keynotes and the sessions on epidemics and machine learning.Below is a write-up that summarizes the most interesting ideas I came across.   
 
 
 ## Contents
@@ -35,14 +33,14 @@ Thus, we want to somehow use ego-network clustering to improve the general clust
 
 <center><img src="/images/complex18/lattanzi_2.jpg" width="30%">   <img src="/images/complex18/lattanzi_4.jpg" width="30%">  <img src="/images/complex18/lattanzi_6.jpg" width="30%">
 </center>   
-
+<br><br>
 
 ### Epidemics using metapopulations and mobility history
 After a general intro to epidemiology and compartmental models, Prof. [Jesus Gomez Gardenez](http://complex.unizar.es/~jesus/) presented an adaptation of the SIS model into networks that include additional information such as metapopulations and history of movements of the nodes. More specifically, each node can belong to a certain metapopulation e.g. a person in a city, and can move to other cities but has to come back to its initial city eventually. The model defines the probability of a node being infected based on the distribution of the infected nodes in its metapopulation at a given time step. This probability breaks down to the probability of staying infected and getting infected. The latter is defined based on the typical probability of a node getting by its neighbors. Note that in this way a node might get infected by a certain metapopulation which it is currently in, even if it belongs to another one. This is modeled using the logs of the nodes' mobility, which indicate how a node moved from one metapopulation to another. The results are remarkable because they reveal that movement between metapopulations during an epidemic might actually hinder the epidemic, which comes in contrast with the general belief.
 
 <center><img src="/images/complex18/gomez_1.jpg" width="30%">   <img src="/images/complex18/gomez_3.jpg" width="30%">  <img src="/images/complex18/gomez_5.jpg" width="30%">
 </center>   
-
+<br><br>
 
 
 ## Keynotes
@@ -56,7 +54,7 @@ Another solution is to change the recommendation process in a more direct manner
 
 <center><img src="/images/complex18/gionis_1.jpg" width="30%">   <img src="/images/complex18/gionis_2.jpg" width="30%">  <img src="complenet18/gionis_3.jpg" width="30%">
 </center>   
-
+<br><br>
 
 ### Influence of the fake news in 2016 US election
 Prof. [Hernan Makse](http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/)'s presentation was divided in three parts. 
@@ -68,6 +66,7 @@ Moreover this approach reveals that too much diversity and mutualism could desta
 
 <center><img src="/images/complex18/makse_2.jpg" width="30%">  <img src="/images/complex18/makse_6.jpg" width="30%">  <img src="/images/complex18/makse_7.jpg" width="30%"> <img src="/images/complex18/makse_10.jpg" width="30%"> 
 </center>   
+<br><br>
 
 ### On the impact of network motifs in network classification 
 Prof. [Don Towsley](https://www.cics.umass.edu/faculty/directory/towsley_donald) presented a keynote on networks motifs. Motifs are patterns that capture the interactions of a social network's users in a micro level.
@@ -82,7 +81,7 @@ The networks examined through these studies were very small (30 to 2500 nodes). 
 
 <center><img src="/images/complex18/towlsey_2.jpg" width="30%">   <img src="/images/complex18/towlsey_4.jpg" width="30%">  <img src="/images/complex18/towlsey_5.jpg" width="30%">
 </center>   
- 
+<br><br>
 
 ## Talks
 * Julien Petit's [temporal random walk](https://arxiv.org/abs/1809.02540) that takes into account three different time scales to model apart from the waiting time of a node, when the edges start and stop.   
