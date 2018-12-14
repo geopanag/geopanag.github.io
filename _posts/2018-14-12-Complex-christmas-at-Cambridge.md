@@ -58,7 +58,7 @@ Another solution is to change the recommendation process in a more direct manner
 
 ### Influence of the fake news in 2016 US election
 Prof. [Hernan Makse](http://www-levich.engr.ccny.cuny.edu/webpage/hmakse/)'s presentation was divided in three parts. 
-The first part was theoretical, and described how influence maximization can be approached from the perspective of optimal percolation, which surprisingly identifies as influencers weakly connected nodes that are surrounded by hubs, a case that other heuristics overlook. <br>   
+The first part was theoretical, and described how influence maximization can be approached from the perspective of optimal percolation, which surprisingly identifies as influencers weakly connected nodes that are surrounded by hubs, a case that other heuristics overlook.<br>
 The next part consisted of an analysis of twitter during the 2016 US election. After showing that one could predict the voting intention through tweets, Prof. Makse presented a thorough analysis based on causal relationships between the tweets of different influencers. This uncovered the relationship between certain republican influencers and twitter accounts that are associated with fake news.  
 Last but not least, he presented a framework for analyzing ecological networks, whose steady state relies on the links of the networks' k-core. Intuitively, this means that the stability of an ecosystem relies on the interactions between certain subspecies.  
 Moreover this approach reveals that too much diversity and mutualism could destabilize an ecosystem.  
@@ -71,7 +71,7 @@ Moreover this approach reveals that too much diversity and mutualism could desta
 ### On the impact of network motifs in network classification 
 Prof. [Don Towsley](https://www.cics.umass.edu/faculty/directory/towsley_donald) presented a keynote on networks motifs. Motifs are patterns that capture the interactions of a social network's users in a micro level.
 The possible combinations that can be examined are limitless, but most studies focus on certain motifs comprised of different directed versions of dyads and 3 or 4-cliques, as they can be interpreted based on computational sociology principles.
-The main subject of this study was to examine whether certain motifs occurence is significantly higher then random in different types of networks.
+The main subject of this study was to examine whether certain motifs occurence is significantly higher then random in different types of networks. <br>
 The results show that networks do exhibit a significant amount of certain motifs, such as mutual dyads and 3-cliques. You can also observe other types of triads such as a transitive triad (one node points to two others and they point to each other) or an incomplete 3 clique. Full triads are very prevalent while cyclic triads are very rare.
 Examining the correlation of motifs between networks, we can see that certain patterns are prevalent in specific networks.  
 This motivates the idea to use the motifs for network classification.
