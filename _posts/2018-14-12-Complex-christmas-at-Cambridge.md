@@ -100,7 +100,7 @@ The accuracy increases significantly when the input includes information based o
 
 * Sergio Gomez suggests a [method](https://arxiv.org/abs/1711.10443) to measure the importance of a link in an epidemic, which can be used to contain an epidemic outbreak. 
 
-* [Alexandre Bovet](https://alexbovet.github.io/) performed a very interesting analysis using causal network reconstruction on twitter activities and revealed that the republicans were influenced more by fake news accounts than the democrates.
+* [Alexandre Bovet](https://alexbovet.github.io/) explained the underpinnings of the aforementioned analysis that revealed that the republicans were influenced more by fake news accounts than the democrates.
  
 
 
