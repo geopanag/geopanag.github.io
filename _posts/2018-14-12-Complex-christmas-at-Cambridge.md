@@ -3,7 +3,7 @@ layout: post
 title: "Complex Christmas at Cambridge"
 date: 2018-12-14
 category: ["all"]
-tags: ["Complex Networks", "Applications", "2018"]
+tags: ["Summary","Complex Networks","2018"]
 ---
 
 *George Panagopoulos, December 14, 2018*
