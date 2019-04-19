@@ -178,7 +178,7 @@ This method was employed to analyze a network of universities, where a directed 
 
 
 
-* [Ulf Aslan](http://ulfaslak.com/) presented a [method](https://arxiv.org/abs/1711.07649.pdf) to identify communities that reoccur in a temporal network. In summary, the network is binned into static instances and edges are drawn between different instances of the same node. The edge weight is proportional to the Jensen-Shannon similarity between the node's ego-networks, which allows to find whether structures are repeated. 
+* [Ulf Aslak](http://ulfaslak.com/) presented a [method](https://arxiv.org/abs/1711.07649.pdf) to identify communities that reoccur in a temporal network. In summary, the network is binned into static instances and edges are drawn between different instances of the same node. The edge weight is proportional to the Jensen-Shannon similarity between the node's ego-networks, which allows to find whether structures are repeated. 
 
   
 <!---!
