@@ -85,6 +85,7 @@ The talk wrapped up by highlighting the strength of this approach in analyzing t
 
 
 ### Sampling on Networks: Estimating Eigenvector Centrality on Incomplete Network
+
 Nicolo Ruggeri presented an interested work in approximating eigenvector centrality for networks that are incomplete or too big to fit in a machine.
 The algorithm has a theoretical guarantee, obtained by bounding the difference between the eigenvector centrality through sampling and the real one.
 The sampling is done in a greedy manner by adding the node that is a neighbor of the existing nodes and minimizes the aforementioned bounds.
@@ -96,6 +97,7 @@ Experimental results in simulated and real world networks showcase the method's 
 
 
 ### Enumerating isolated cliques in temporal networks
+
 Hendrik Molter gave an interesting talk in formulating the retreival of isolated cliques in a temporal network.
 The main idea was to check all possible combinations of maximum-average cliques in different time patterns (usually-alltime).
 Moreover, the changes of an average-usual cliques are bound between consecutive time states with a constant.
@@ -105,6 +107,7 @@ Subsequently, they provide a fixed-parameter enumeration algorithm and derive co
 
 
 ### Deep Reinforcement Learning for Task-driven Discovery of Incomplete Networks
+
 Peter Morales presented a novel reinforcement learning algorithm for network discovery.  
 The aim is to uncover hiden parts of the network by choosing nodes from a border set based on a policy learnt offline for an actor-critic model.
 The training set for the policy is formed by simulated possible trajectiories, every trajectory having a certain background network, and every step corresponding to possible expansions of that network.
@@ -117,12 +120,14 @@ Moreover, the methods trained on simulated networks such as stochastic block mod
 
 
 ### Quantifying predictability in Football through network analysis; A historical approach
+
 An insightfull talk on predicting football (and why it's so hard), was given by Prof. Taha Yasseri.
 Some of the main takes were that small country leagues are harder to predict then big ones, and home advantage is very crucial to a team's overall performance.
 <br>
 
 
 ### Roles in social interactions: graphlets in temporal networks applied to learning analytics roles in social interactions: graphlets in temporal networks applied to learning analytics
+
 Raphaël Charbey showcased a temporal analysis of social networks of students throughout an academic semester. The networks were formed by exercise validation between students, 
 and it was broken down to snapshots based on sufficient time spaces of inactivity, in this case the threshold was 15 days.
 In each snapshot network graphlets of size 3 were derived, and node embeddings were derived based on the number of graphlets the node belongs to in each time step.
@@ -133,12 +138,14 @@ Then the nodes were clustered based on those embeddings and their roles were def
 
 
 ### Transporters: Spring-systems in disguise. A physics model for analysing transporter networks
+
 An impressive lighting talk by Jonathan Bourne about an embedding of networks based on spring-systems. 
 This representation showcased high discriminative accuracy in simulated networks and insightfull plots in a real-world application.
 <br>
 
 
 ### A Simple Approach to Attributed Graph Embedding via Enhanced
+
 Alberto Montresor presented a graph autoencoder, SAGE2VEC, where the input consists of network and attributal information. The aim of is to recunstruct a node's neighborhood and its attributes, with a sparsity constraint.
 The results in four well-known datasets for node classification and link prediction are promising.
  <center><img src="/images/complex19/sage2vec1.jpg" width="30%">   <img src="/images/complex19/sage2vec2.jpg" width="30%"> <img src="/images/complex19/sage2vec3.jpg" width="30%"> 
@@ -147,6 +154,7 @@ The results in four well-known datasets for node classification and link predict
 
 
 ### Community-Aware Content Diffusion: Embeddednes and Permeability
+
 Giulio Rossetti, from the team of the creators of [ndlib](https://ndlib.readthedocs.io/en/latest/) presented a model of diffusion that takes into account spreading inside and between communities.
 More specifically, the diffusion model has higher probability of passing the information between nodes inside the community rather then between communities.
 The difference in the rate of communities reached at the end of the simulation is significant.
@@ -155,9 +163,9 @@ The difference in the rate of communities reached at the end of the simulation i
 
 
 ## Conclusion:
+
 Overall I believe the conference achieves an increasing balance between computer science and physics approaches, as this year many submissions addressed problems using machine learning or big data, apart from several simulation or exploration based studies which is the central theme of network science.
 Lisbons is quite lively and easy to explore on foot.
-
 **Bonus**: a sand sculpture of a crocodile on the beach of Lisbon.
 
  <center><img src="/images/complex19/crocodile.jpg" width="50%"> 
