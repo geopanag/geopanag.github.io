@@ -64,7 +64,7 @@ Subsequently, other advanced kernels were explained through examples, such as Ea
 and a benchmarking study using to our team's new library for graph kernels, [GraKel](https://ysig.github.io/GraKeL/dev/), facilitated a thorough comparison between them.
 Finally, Prof. Vazirgiannis underlined some key applications of graph kernels,  
 
- <center><img src="/images/complex19/vaz2.jpg" width="25%">   <img src="/images/complex19/vaz3.jpg" width="25%"> <img src="/images/complex19/vaz6.jpeg" width="25%"></center> <img src="/images/complex19/vaz5.jpeg" width="25%"></center>    
+ <center><img src="/images/complex19/vaz2.jpg" width="25%">   <img src="/images/complex19/vaz3.jpg" width="25%"> <img src="/images/complex19/vaz6.jpeg" width="25%"> <img src="/images/complex19/vaz5.jpeg" width="25%"></center>    
 <br><br>
 
 
@@ -80,10 +80,6 @@ The talk wrapped up by highlighting the strength of this approach in analyzing t
 
 
 
-
-## Interesting talks
-
-
 ### Sampling on Networks: Estimating Eigenvector Centrality on Incomplete Network
 
 Nicolo Ruggeri presented an interested work in approximating eigenvector centrality for networks that are incomplete or too big to fit in a machine.
@@ -91,8 +87,9 @@ The algorithm has a theoretical guarantee, obtained by bounding the difference b
 The sampling is done in a greedy manner by adding the node that is a neighbor of the existing nodes and minimizes the aforementioned bounds.
 Experimental results in simulated and real world networks showcase the method's superiority.
 
- <center><img src="/images/complex19/sampling2.jpg" width="30%">   <img src="/images/complex19/sampling3.jpg" width="30%"> 
-<br>
+ <center><img src="/images/complex19/sampling2.jpg" width="30%">   <img src="/images/complex19/sampling3.jpg" width="30%"> </center>    
+<br><br>
+
 
 
 
@@ -102,11 +99,12 @@ Hendrik Molter gave an interesting talk in formulating the retreival of isolated
 The main idea was to check all possible combinations of maximum-average cliques in different time patterns (usually-alltime).
 Moreover, the changes of an average-usual cliques are bound between consecutive time states with a constant.
 Subsequently, they provide a fixed-parameter enumeration algorithm and derive computational times for all aforementioned cases.
-<br>
+
 
 
 
 ### Deep Reinforcement Learning for Task-driven Discovery of Incomplete Networks
+
 
 Peter Morales presented a novel reinforcement learning algorithm for network discovery.  
 The aim is to uncover hiden parts of the network by choosing nodes from a border set based on a policy learnt offline for an actor-critic model.
@@ -114,16 +112,16 @@ The training set for the policy is formed by simulated possible trajectiories, e
 The policy is learnt by a neural network, and since the number of candidate nodes are too big in each step, they are ranked based on personalized pagerank first.
 The results indicate that the method is superior to other methods that rely on online examples.
 Moreover, the methods trained on simulated networks such as stochastic block models, generalizes very well to large scale real world networks such as Facebook.
- <center><img src="/images/complex19/peter1.jpg" width="30%">   <img src="/images/complex19/peter2.jpg" width="30%"> <img src="/images/complex19/peter3.jpg" width="30%"> 
-<br>
-
+ <center><img src="/images/complex19/peter1.jpg" width="30%">   <img src="/images/complex19/peter2.jpg" width="30%"> <img src="/images/complex19/peter3.jpg" width="30%"> </center>    
+<br><br>
 
 
 ### Quantifying predictability in Football through network analysis; A historical approach
 
 An insightfull talk on predicting football (and why it's so hard), was given by Prof. Taha Yasseri.
 Some of the main takes were that small country leagues are harder to predict then big ones, and home advantage is very crucial to a team's overall performance.
-<br>
+
+
 
 
 ### Roles in social interactions: graphlets in temporal networks applied to learning analytics roles in social interactions: graphlets in temporal networks applied to learning analytics
@@ -133,7 +131,8 @@ and it was broken down to snapshots based on sufficient time spaces of inactivit
 In each snapshot network graphlets of size 3 were derived, and node embeddings were derived based on the number of graphlets the node belongs to in each time step.
 Then the nodes were clustered based on those embeddings and their roles were defined, with some very cool visualizations.
  <center><img src="/images/complex19/graphlets_tem2.jpg" width="30%">   <img src="/images/complex19/graphlets_tem3.jpg" width="30%"> <img src="/images/complex19/graphlets_tem4.jpg" width="30%"> 
-<br>
+</center>    
+<br><br>
 
 
 
@@ -141,15 +140,18 @@ Then the nodes were clustered based on those embeddings and their roles were def
 
 An impressive lighting talk by Jonathan Bourne about an embedding of networks based on spring-systems. 
 This representation showcased high discriminative accuracy in simulated networks and insightfull plots in a real-world application.
-<br>
+
+
 
 
 ### A Simple Approach to Attributed Graph Embedding via Enhanced
 
+
 Alberto Montresor presented a graph autoencoder, SAGE2VEC, where the input consists of network and attributal information. The aim of is to recunstruct a node's neighborhood and its attributes, with a sparsity constraint.
 The results in four well-known datasets for node classification and link prediction are promising.
  <center><img src="/images/complex19/sage2vec1.jpg" width="30%">   <img src="/images/complex19/sage2vec2.jpg" width="30%"> <img src="/images/complex19/sage2vec3.jpg" width="30%"> 
-<br>
+</center>    
+<br><br>
 
 
 
@@ -158,7 +160,7 @@ The results in four well-known datasets for node classification and link predict
 Giulio Rossetti, from the team of the creators of [ndlib](https://ndlib.readthedocs.io/en/latest/) presented a model of diffusion that takes into account spreading inside and between communities.
 More specifically, the diffusion model has higher probability of passing the information between nodes inside the community rather then between communities.
 The difference in the rate of communities reached at the end of the simulation is significant.
-<br>
+
 
 
 
@@ -168,4 +170,4 @@ Overall I believe the conference achieves an increasing balance between computer
 Lisbons is quite lively and easy to explore on foot.
 **Bonus**: a sand sculpture of a crocodile on the beach of Lisbon.
 
- <center><img src="/images/complex19/crocodile.jpg" width="50%"> 
+ <center><img src="/images/complex19/crocodile.jpg" width="50%"> </center>    
