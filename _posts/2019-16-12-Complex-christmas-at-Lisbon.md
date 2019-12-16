@@ -37,7 +37,7 @@ In other words, more than one interventions may be needed if the network has a s
 
 ## Real-world reflections on online frienshdips
 
-Dr. Lada Adamic presented two distinct exploratory works that showcase patterns of the real world that depicted in online friendships.
+Dr. Lada Adamic presented two distinct exploratory works that showcase patterns of the real world depicted in online friendships.
 
 The first part was an analysis of friendship ties between people in different states of US, which revealed bonds that date back generations ago due to migrations, such as the one from Minessota to California.
 The same intriguing result applies to country-level, where one could detect heavy connections between Italy and New York, as well as Mexico and California.
