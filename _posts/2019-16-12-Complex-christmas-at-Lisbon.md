@@ -64,7 +64,7 @@ Subsequently, other advanced kernels were explained through examples, such as Ea
 and a benchmarking study using to our team's new library for graph kernels, [GraKel](https://ysig.github.io/GraKeL/dev/), facilitated a thorough comparison between them.
 Finally, Prof. Vazirgiannis underlined some key applications of graph kernels,  
 
- <center><img src="/images/complex19/vaz2.jpg" width="25%">   <img src="/images/complex19/vaz3.jpg" width="25%"> <img src="/images/complex19/vaz6.jpeg" width="25%"> <img src="/images/complex19/vaz5.jpeg" width="25%"></center>    
+ <center><img src="/images/complex19/vaz2.jpg" width="20%">   <img src="/images/complex19/vaz3.jpg" width="20%"> <img src="/images/complex19/vaz6.jpeg" width="20%"> <img src="/images/complex19/vaz5.jpeg" width="20%"></center>    
 <br><br>
 
 
