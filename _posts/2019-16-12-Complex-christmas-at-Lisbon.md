@@ -64,8 +64,7 @@ Subsequently, other advanced kernels were explained through examples, such as Ea
 and a benchmarking study using to our team's new library for graph kernels, [GraKel](https://ysig.github.io/GraKeL/dev/), facilitated a thorough comparison between them.
 Finally, Prof. Vazirgiannis underlined some key applications of graph kernels,  
 
- <center><img src="/images/complex19/vaz2.jpg" width="20%">   <img src="/images/complex19/vaz3.jpg" width="20%"> <img src="/images/complex19/vaz6.jpeg" width="20%"></center>    
- <img src="/images/complex19/vaz5.jpeg" width="20%"></center>    
+ <center><img src="/images/complex19/vaz2.jpg" width="25%">   <img src="/images/complex19/vaz3.jpg" width="25%"> <img src="/images/complex19/vaz6.jpeg" width="25%"></center> <img src="/images/complex19/vaz5.jpeg" width="25%"></center>    
 <br><br>
 
 
@@ -112,7 +111,7 @@ The training set for the policy is formed by simulated possible trajectiories, e
 The policy is learnt by a neural network, and since the number of candidate nodes are too big in each step, they are ranked based on personalized pagerank first.
 The results indicate that the method is superior to other methods that rely on online examples.
 Moreover, the methods trained on simulated networks such as stochastic block models, generalizes very well to large scale real world networks such as Facebook.
- <center><img src="/images/complex19/peter1.jpg" width="20%">   <img src="/images/complex19/peter2.jpg" width="20%"> <img src="/images/complex19/peter3.jpg" width="20%"> 
+ <center><img src="/images/complex19/peter1.jpg" width="30%">   <img src="/images/complex19/peter2.jpg" width="30%"> <img src="/images/complex19/peter3.jpg" width="30%"> 
 <br>
 
 
