@@ -98,7 +98,7 @@ Experimental results in simulated and real world networks showcase the method's 
 
 ### Enumerating isolated cliques in temporal networks
 Hendrik Molter gave an interesting talk in formulating the retreival of isolated cliques in a temporal network.
-The main idea was to check all possible## Enumerating isolated cliques combinations of maximum-average cliques in different time patterns (usually-alltime).
+The main idea was to check all possible combinations of maximum-average cliques in different time patterns (usually-alltime).
 Moreover, the changes of an average-usual cliques are bound between consecutive time states with a constant.
 Subsequently, they provide a fixed-parameter enumeration algorithm and derive computational times for all aforementioned cases.
 <br>
