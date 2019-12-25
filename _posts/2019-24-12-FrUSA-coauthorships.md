@@ -29,24 +29,15 @@ Among the French academic institutes that collaborate with USA we report in Tabl
 | **France**   | **USA**   |
 |---|---|
 |Centre national de la recherche scientifique (CNRS) | California Institute of Technology (CalTech) [2678] <br> Massachusetts Institute of Technology(MIT) [2226] <br> Harvard University [2106]| 
-|---|---|
 |French Institute of Health and Medical Research (FIHM) | Harvard University [1765] <br> National Institutes of Health (NIH) [1484] <br> Boston Children's Hospital (BCH) [1053]|
-|---|---|
 |University of Paris (UParis) | Harvard University [2061] <br> Stanford University [1486] <br> Massachusetts Institute of Technology (MIT) [1280] |
-|---|---|
 |École Normale Supérieure (ENS) | Harvard University [276] <br> Massachusetts Institute of Technology (MIT) [252] <br>  University of California, Berkeley [247]| 
-|---|---|
 |Institut National de la Recherche Agronomique (INRA) | University of California, Davis [255]<br>   Agricultural Research Service (AGS) [255]<br>  United States Department of Agriculture (USDA) [244] |
-|---|---|
 |Pierre-and-Marie-Curie University (UPMC) | Massachusetts Institute of Technology (MIT) [769]<br>  Harvard University [761]<br>  University of Michigan [670]|
-|---|---|
 | University of Bordeaux|Harvard University [335] <br>  University of Washington [277]<br>  National Institutes of Health (NIH) [212]|
-|---|---|
 | University of Paris-Sud | Massachusetts Institute of Technology (MIT) [1327] <br> Harvard University [1305] <br> Iowa State University [1093]|
-|---|---|
 |University of Montpellier | University of Washington [230] <br> Harvard University [219]<br>  University of Maryland, College Park (UMD) [211]|
-|---|---|
-|Pasteur Institute | National Institutes of Health (NIH) [561] <br>  Harvard University [421] <br>  Centers for Disease Control and Prevention (CDCP) [313]|
+|Pasteur Institute | National Institutes of Health (NIH) [561] <br>  Harvard University [421] <br>  Centers for Disease Control and Prevention (CDCP) [313]|<br>
   *Table 1. THe 10 most productive french institutes and their top 3 USA collaborators.*
 
 
@@ -91,7 +82,7 @@ where $C$ is the set of all collaborations. The threshold and the density are vi
 
 
   
-<center><img src="/images/fr_us/density-1.jpg" width="80%">  
+<center><img src="/images/fr_us/density-1.jpg" width="40%">  
 </center>   
 *Figure 4. Density of number of collaborations with the number of papers, and the threshold to define the top collaborations. | FR-US joint papers \textit{citations} temporal distribution per prominent scientific area.*
 <br><br>
@@ -124,24 +115,15 @@ The top 10 collaborations in terms of absolute number of joint papers can be see
 | **France**   | **USA**   |
 |---|---|
 |California Institute of Technology    | Centre national de la recherche scientifique (CNRS)  2678|
-|---|---|
 | Massachusetts Institute of Technology | Centre national de la recherche scientifique  (CNRS) 2226|  
-|---|---|
 | Harvard University   | Centre national de la recherche scientifique (CNRS)  2106|
-|---|---|
 | University of Maryland, College Park    | Centre national de la recherche scientifique  (CNRS) 2092 |
-|---|---|
 | Harvard University   |  University of Paris   2061|
-|---|---|
 | Ohio State University   | Centre national de la recherche scientifique (CNRS)  1840 |
-|---|---|
 | Harvard University   | French Institute of Health and Medical Research   1765   |
-|---|---|
 | University of Wisconsin-Madison      |   Centre national de la recherche scientifique (CNRS)  1742|
-|---|---|
 | Princeton University  |  Centre national de la recherche scientifique (CNRS)  1638|
-|---|---|
-| University of Michigan |  Centre national de la recherche scientifique (CNRS)  1596|
+| University of Michigan |  Centre national de la recherche scientifique (CNRS)  1596|<br>
  *Table 2. Top US-FR collaborations in terms of number of papers.*
 
 
@@ -163,7 +145,7 @@ Some observations include:<br>
 
 
 <center><img src="/images/fr_us/2-1.jpg" width="40%">  <img src="/images/fr_us/3-1.jpg" width="40%">  </center>
-<center> <img src="/images/fr_us/4-1.jpg" width="40%">  <center><img src="/images/fr_us/5-1.jpg" width="40%"> </center>
+<center> <img src="/images/fr_us/4-1.jpg" width="40%">  <img src="/images/fr_us/5-1.jpg" width="40%"> </center>
 <center> <img src="/images/fr_us/6-1.jpg" width="40%">  <img src="/images/fr_us/7-1.jpg" width="40%">  </center>
 <center><img src="/images/fr_us/8-1.jpg" width="40%">  <img src="/images/fr_us/9-1.jpg" width="40%">  </center>
 <center> <img src="/images/fr_us/10-1.jpg" width="40%"> <img src="/images/fr_us/11-1.jpg" width="40%">  </center>
