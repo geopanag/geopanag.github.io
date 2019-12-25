@@ -19,7 +19,7 @@ wikipedia url and named entity recognition to identify the country of its addres
 ### Top Academic Institutes
 Among the French academic institutes that collaborate with USA we report in Table 1 the 10 most productive (in terms of number of papers) and their most frequent collaborators in the USA. Figure 1  visualizes the same information with a chord plot, where the edges are colored based on the US institutes. This shows the US universities collaborating mostly with the the aforementioned most productive French institutes, with Harvard and MIT standing out with more than 3 inter-university collaborations.
 
-<center><img src="/images/fr_us/chord.jpg" width="80%">  
+<center><img src="/images/fr_us/chord.jpg" width="60%">  
 </center>   
 *Figure 1. Table 1 visualized in a chord plot*
 <br><br>
@@ -169,7 +169,7 @@ Some observations include:<br>
 <center> <img src="/images/fr_us/10-1.jpg" width="40%"> <img src="/images/fr_us/11-1.jpg" width="40%">  </center>
 <br>
 
-### Conclusion
+
 
 This analysis was performed after request of the [Office for Science and Technology](https://www.france-science.org/-Homepage-English-.html)  of the Embassy of France in the Unites-States.
 <!--- (Yves Frenot, Jean-Baptiste Bordes, Maxime Benallaoua) 
