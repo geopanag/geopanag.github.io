@@ -17,7 +17,7 @@ wikipedia url and named entity recognition to identify the country of its addres
 
 ## Analysis
 ### Top Academic Institutes
-Among the French academic institutes that collaborate with USA we report in Table 1 the 10 most productive (in terms of number of papers) and their most frequent collaborators in the USA. Figure 1  visualizes the same information with a chord plot, where the edges are colored based on the US institutes. This shows the US universities collaborating mostly with the the aforementioned most productive French institutes, with Harvard and MIT standing out with more than 3 inter-university collaborations.
+Among the French academic institutes that collaborate with USA we report in Table 1 the 10 most productive (in terms of number of papers) and their most frequent collaborators in the USA. Figure 1 visualizes the same information with a chord plot, where the edges are colored based on the US institutes. This shows the US universities collaborating mostly with the the aforementioned most productive French institutes, with Harvard and MIT standing out with more than 3 inter-university collaborations.
 
 <center><img src="/images/fr_us/chord.jpg" width="60%">  
 </center>   
@@ -38,6 +38,7 @@ Among the French academic institutes that collaborate with USA we report in Tabl
 | University of Paris-Sud | Massachusetts Institute of Technology (MIT) [1327] <br> Harvard University [1305] <br> Iowa State University [1093]|
 |University of Montpellier | University of Washington [230] <br> Harvard University [219]<br>  University of Maryland, College Park (UMD) [211]|
 |Pasteur Institute | National Institutes of Health (NIH) [561] <br>  Harvard University [421] <br>  Centers for Disease Control and Prevention (CDCP) [313]|<br>
+
   *Table 1. THe 10 most productive french institutes and their top 3 USA collaborators.*
 
 
@@ -124,6 +125,7 @@ The top 10 collaborations in terms of absolute number of joint papers can be see
 | University of Wisconsin-Madison      |   Centre national de la recherche scientifique (CNRS)  1742|
 | Princeton University  |  Centre national de la recherche scientifique (CNRS)  1638|
 | University of Michigan |  Centre national de la recherche scientifique (CNRS)  1596|<br>
+
  *Table 2. Top US-FR collaborations in terms of number of papers.*
 
 
