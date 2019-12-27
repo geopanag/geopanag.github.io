@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Coauthorships between French and US institutes"
-date: 2019-12-14
+date: 2019-12-25
 category: ["all"]
 tags: ["Exploratory","Coauthorships","MAG"]
 ---
