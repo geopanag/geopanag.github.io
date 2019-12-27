@@ -46,8 +46,8 @@ Among the French academic institutes that collaborate with USA we report in Tabl
 
 ### The timeline of French - US  academic collaborations 
 
-The oldest collaboration between a French and a US institute dates back to 1930, with a joint paper between Ecole Normal Superiere and Cornell University entitled "LA GRAISSE DU SANG ET LA GRAISSE DU LAIT PENDANT LA. LACTATION"\footnote{Ch. Porcher, L. Maynard. LA GRAISSE DU SANG ET LA GRAISSE DU LAIT PENDANT LA
-LACTATION. Le Lait, INRA Editions, 1930, 10 (96), pp.601-613. ffhal-00894993}.
+The oldest collaboration between a French and a US institute dates back to 1930, with a joint paper between Ecole Normal Superiere and Cornell University: Ch. Porcher, L. Maynard. LA GRAISSE DU SANG ET LA GRAISSE DU LAIT PENDANT LA
+LACTATION. Le Lait, INRA Editions, 1930, 10 (96), pp.601-613. ffhal-00894993.
 Since then, the number of collaborations, as well as their impact (in terms of citations) have increased significantly, as one can see in Figure 2.
 Moreover, there is an almost exponential increase in the number of papers produced by joint collaborations. The same applies for the impact of these works, which increases especially until 2010. Naturally, the citations count in the recent years is diminished, as young papers have less citations and they need time to get cited. There are also some monumental years, such as 2012, where the inclusion of the publications on the discovery of the Higgs Boson particle has produced a massive number of citations. 
 
@@ -64,7 +64,7 @@ MAG contains field and subfield assignments to papers, which we can deploy to ex
 
 * The second field is computer science and the third biology. Especially in computer science, there is a steep increase around 2010.
 
-* The citations do not follow the same pattern, as the top cited domain is  medicine, followed by biology and and computer science. This is due to  the known differences in citation patterns among computer science and biology \footnote{https://www.sciencedirect.com/science/article/pii/S2405844016322800}.
+* The citations do not follow the same pattern, as the top cited domain is  medicine, followed by biology and and computer science. This is due to  the [known differences](https://www.sciencedirect.com/science/article/pii/S2405844016322800) in citation patterns among computer science and biology.
 
 * Mathematics is the least active field in this context since publications in this area are relatively rare. Still there are some spikes of citations through the years because of some important papers.
     
@@ -156,9 +156,10 @@ Some observations include:<br>
 ## Conclusion
 These initial results indicate there is an intensive and increasing scientific production in terms of joint papers and resulting citations. Overall, several new hypotheses can be tested: <br>
 
-- Identification of the most central authors, cliques or laboratories that guide the course of the majority of the  collaborations in a direct or indirect manner.
-- Prediction of new collaborations based on the fieldsthe French-US institutes belong to or the venues they publish at.
+- Use [influence measures](http://graphdegeneracy.org/scientometrics/) to identify the most crucial authors, cliques or laboratories that guide the course of the majority of the  collaborations in a direct or indirect manner.
+- Prediction of new collaborations based on the fields the French-US institutes belong to or the venues they publish at.
 - Use of [OpenAIRE](https://zenodo.org/record/3516918#.XgZfycb0k5k) to include information about funded projects.
+
 
 This analysis was performed with the guidance of my advisor [Prof. Vazirgiannis](http://www.lix.polytechnique.fr/Labo/Michalis.Vazirgiannis/), after the request of Dr. Yves Frenot and Dr. Jean-Baptiste Bordes from the [Office for Science and Technology](https://www.france-science.org/-Homepage-English-.html)  of the Embassy of France in the Unites-States, with whom we collaborated to set the hypotheses examined.
 <!--- (Yves Frenot, Jean-Baptiste Bordes) 
