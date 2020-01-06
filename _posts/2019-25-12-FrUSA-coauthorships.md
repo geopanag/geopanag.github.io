@@ -49,7 +49,7 @@ Among the French academic institutes that collaborate with USA we report in Tabl
 The oldest collaboration between a French and a US institute dates back to 1930, with a joint paper between Ecole Normal Superiere and Cornell University: Ch. Porcher, L. Maynard. LA GRAISSE DU SANG ET LA GRAISSE DU LAIT PENDANT LA
 LACTATION. Le Lait, INRA Editions, 1930, 10 (96), pp.601-613. ffhal-00894993.
 Since then, the number of collaborations, as well as their impact (in terms of citations) have increased significantly, as one can see in Figure 2.
-Moreover, there is an almost exponential increase in the number of papers produced by joint collaborations. The same applies for the impact of these works, which increases especially until 2010. Naturally, the citations count in the recent years is diminished, as young papers have less citations and they need time to get cited. There are also some monumental years, such as 2012, where the inclusion of the publications on the discovery of the Higgs Boson particle has produced a massive number of citations. 
+Moreover, there is an almost exponential increase in the number of papers produced by joint collaborations. The same applies to the impact of these works, which increases especially until 2010. Naturally, the citations count in recent years is diminished, as young papers have fewer citations and they need time to get cited. There are also some monumental years, such as 2012, where the inclusion of the publications on the discovery of the Higgs Boson particle has produced a massive number of citations. 
 
 
 <center><img src="/images/fr_us/papers_in_time-1.jpg" width="60%">  <img src="/images/fr_us/citations_in_time-1.jpg" width="60%">  
@@ -64,11 +64,10 @@ MAG contains field and subfield assignments to papers, which we can deploy to ex
 
 * The second field is computer science and the third biology. Especially in computer science, there is a steep increase around 2010.
 
-* The citations do not follow the same pattern, as the top cited domain is  medicine, followed by biology and and computer science. This is due to  the [known differences](https://www.sciencedirect.com/science/article/pii/S2405844016322800) in citation patterns among computer science and biology.
+* Citations do not follow the same pattern, as the top cited domain is medicine, followed by biology and computer science. This is due to  the [known differences](https://www.sciencedirect.com/science/article/pii/S2405844016322800) in citation patterns among computer science and biology.
 
-* Mathematics is the least active field in this context since publications in this area are relatively rare. Still there are some spikes of citations through the years because of some important papers.
+* Mathematics is the least active field in this context since publications in this area are relatively rare. Still there are some spikes of citations through the years because of important papers.
     
-
   
 <center><img src="/images/fr_us/papers_by_field_in_time-1.jpg" width="60%">  
 </center>   
@@ -82,16 +81,16 @@ MAG contains field and subfield assignments to papers, which we can deploy to ex
 
 
 ### Top collaborations
-Given a collaboration *c* among a French and a US scientific institute, the strength *P(c)* of the collaboration refers to the number of papers produced by this colllaboration. The collaborations are ranked according this strength. The most important ones are those for which the strength is above the average number of papers in all collaborations and six standard deviations of the distribution  
+Given a collaboration *c* among a French and a US scientific institute, the strength *P(c)* of the collaboration refers to the number of papers produced by this collaboration. The collaborations are ranked according to this strength. The most important ones are those for which the strength is above the average number of papers in all collaborations and six standard deviations of the distribution  
 <!---i.e. $\{c | P(c)\geq mean({\{P(c')\}_{c'\in C}})+6sd(\{P(c')\}_{c'\in C})\}$, 
-where $C$ is the set of all collaborations---->. The threshold and the density are visualized in figure Figure 5. The number of collaborations that are above this threshold is 492.
+where $C$ is the set of all collaborations---->. The threshold and the density are visualized in figure Figure 5. The number of collaborations above this threshold is 492.
   
 <center><img src="/images/fr_us/density-1.jpg" width="40%">  
 </center>   
-*Figure 5. Density of number of collaborations with the number of papers, and the threshold to define the top collaborations.*
+*Figure 5. Density of the number of collaborations per number of papers, and the threshold to define the top collaborations.*
 <br><br>
 
-These are visualized in the map plot Figure 6. Although we can get an idea of the overall cities that collaborate mostly with each other, it is still a very perplex image to make sense of. Thus we reduce it even more, by taking the top 100 collaborations, and making a weighted bipartite plot in Figure 7.
+These are visualized in the map plot Figure 6. Although we can get an idea of the overall cities that collaborate mostly with each other, it is still a very perplex image to make sense of. Thus we reduce it even more, by taking the top 100 collaborations and making a weighted bipartite plot in Figure 7.
 
 <center><img src="/images/fr_us/gmaps_re-1.jpg" width="80%">  
 </center>   
@@ -106,14 +105,14 @@ These are visualized in the map plot Figure 6. Although we can get an idea of th
 
 
 Few observations derived from a first glance on this network:
-* CNRS is the institute with  most collaborations, followed by Ecole Polytechnique and University of Strasbourg.
-* The strength of collaboration is proportional to width of the line connecting institutes. For instance  CNRS is highly connected with CalTech and UMD while University of Paris shows a dense collaboration with Harvard.
+* CNRS is the institute with most collaborations, followed by Ecole Polytechnique and University of Strasbourg.
+* The strength of collaboration is proportional to the width of the line connecting institutes. For instance  CNRS is highly connected with CalTech and UMD while University of Paris shows a dense collaboration with Harvard.
 * The French Institute of Health and Medical Research collaborates only with two US institutes well known for their achievements in medicine, Harvard and NIH.
-* The most productive  French Institute is clearly CNRS, followed by University of Paris, while for the USA it is Harvard and University of Michigan.
+* The most productive French Institute is clearly CNRS, followed by University of Paris, while for the USA it is Harvard and University of Michigan.
 
 
 ### Top 10 collaborations
-To look deeper in the most productive collaborations, we extract the top 10 collaborations in terms of absolute number of joint papers can be seen in table 2.
+To look deeper in the most productive collaborations, we extract the top 10 in terms of absolute number of joint papers can be seen in table 2.
 For each of the 10 collaborations we report their paper distribution per field, in Figure 8.
 Some observations include:<br>
 
