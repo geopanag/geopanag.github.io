@@ -44,12 +44,12 @@ Among the French academic institutes that collaborate with USA we report in Tabl
   *Table 1. THe 10 most productive french institutes and their top 3 USA collaborators.*
 
 
-### The timeline of French - US  academic collaborations 
+### The timeline of French-US collaborations 
 
 The oldest collaboration between a French and a US institute dates back to 1930, with a joint paper between Ecole Normal Superiere and Cornell University: Ch. Porcher, L. Maynard. LA GRAISSE DU SANG ET LA GRAISSE DU LAIT PENDANT LA
 LACTATION. Le Lait, INRA Editions, 1930, 10 (96), pp.601-613. ffhal-00894993.
 Since then, the number of collaborations, as well as their impact (in terms of citations) have increased significantly, as one can see in Figure 2.
-Moreover, there is an almost exponential increase in the number of papers produced by joint collaborations. The same applies to the impact of these works, which increases especially until 2010. Naturally, the citations count in recent years is diminished, as young papers have fewer citations and they need time to get cited. There are also some monumental years, such as 2012, where the inclusion of the publications on the discovery of the Higgs Boson particle has produced a massive number of citations. 
+There is an almost exponential increase in the number of papers produced by joint collaborations. The same applies to the impact of these works, which increases especially until 2010. Naturally, the citations count in recent years is diminished, as young papers have fewer citations and they need time to get cited. There are also some monumental years, such as 2012, where the inclusion of the publications on the discovery of the Higgs Boson particle has produced a massive number of citations. 
 
 
 <center><img src="/images/fr_us/papers_in_time-1.jpg" width="60%">  <img src="/images/fr_us/citations_in_time-1.jpg" width="60%">  
@@ -105,9 +105,10 @@ These are visualized in the map plot Figure 6. Although we can get an idea of th
 
 
 Few observations derived from a first glance on this network:
-* CNRS is the institute with most collaborations, followed by Ecole Polytechnique and University of Strasbourg.
-* The strength of collaboration is proportional to the width of the line connecting institutes. For instance  CNRS is highly connected with CalTech and UMD while University of Paris shows a dense collaboration with Harvard.
-* The French Institute of Health and Medical Research collaborates only with two US institutes well known for their achievements in medicine, Harvard and NIH.
+* CNRS is the institute with the most collaborations, followed by Ecole Polytechnique and University of Strasbourg.
+* CNRS is highly connected with CalTech and UMD while University of Paris shows a dense collaboration with Harvard.
+* The French Institute of Health and Medical Research has few collaborations, but with two US institutes well known for their achievements in medicine, Harvard and NIH
+* Institutes performing research on fields like physics, biology or chemistry tend to have more connections than the ones focusing on language studies or the ones performing solely medical research. This might indicate that STEM projects applied or related to medicine exhibit international collaborations, while purely medical studies have a local collaboration pattern.
 * The most productive French Institute is clearly CNRS, followed by University of Paris, while for the USA it is Harvard and University of Michigan.
 
 
@@ -118,7 +119,7 @@ Some observations include:<br>
 
 * The collaboration between CalTech and CNRS focuses mainly in math,chemistry and physics.
 
-* The joint works of CNRS with MIT and Harvard are predominantly in medicine. In contrast, the secondary fields in MIT are computer science, chemistry, physics and math, while for Harvard biology is second and the rest follow. This makes sense because, as mentioned above, MIT is focusing more on science and technology while Harvard has a broader scope.
+* The joint works of CNRS with MIT and Harvard are predominantly related to medicine. In contrast, the secondary fields in MIT are computer science, chemistry, physics and math, while for Harvard biology is second and the rest follow. This makes sense because, as mentioned above, MIT is focusing more on science and technology while Harvard has a broader scope.
 
 * University of Maryland (UMD) and CNRS seem to collaborate in a variety of disciplines, with physics being the  most dominant. 
 
