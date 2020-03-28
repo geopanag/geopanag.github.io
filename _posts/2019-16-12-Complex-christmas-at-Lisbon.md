@@ -144,7 +144,7 @@ This representation showcased high discriminative accuracy in simulated networks
 
 
 
-### A Simple Approach to Attributed Graph Embedding via Enhanced
+### A Simple Approach to Attributed Graph Embedding
 
 
 Alberto Montresor presented a graph autoencoder, SAGE2VEC, where the input consists of network and attributal information. The aim of is to recunstruct a node's neighborhood and its attributes, with a sparsity constraint.
