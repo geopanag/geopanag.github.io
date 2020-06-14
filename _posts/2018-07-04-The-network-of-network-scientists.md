@@ -3,7 +3,7 @@ layout: post
 title: "The Network of Network Scientists"
 date: 2018-07-04
 category: ["all"]
-tags: ["Summary", "International Conference on Network Science", "2018"]
+tags: ["Summary", "Network Science", "2018"]
 ---
 
 *George Panagopoulos, 4th of July, 2018*
