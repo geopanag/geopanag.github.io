@@ -161,7 +161,7 @@ These initial results indicate there is an intensive and increasing scientific p
 - Use of [OpenAIRE](https://zenodo.org/record/3516918#.XgZfycb0k5k) to include information about funded projects.
 
 
-This analysis was performed with the guidance of my advisor [Prof. Vazirgiannis](http://www.lix.polytechnique.fr/Labo/Michalis.Vazirgiannis/), after the request of Dr. Yves Frenot, Dr. Jean-Baptiste Bordes and Maxime Benalloua from the [Office for Science and Technology](https://www.france-science.org/-Homepage-English-.html)  of the Embassy of France in the United-States, with whom we collaborated to set the hypotheses examined.
+This analysis was performed with the guidance of my advisor [Prof. Vazirgiannis](http://www.lix.polytechnique.fr/Labo/Michalis.Vazirgiannis/), after the request of Dr. Yves Frenot, Dr. Jean-Baptiste Bordes and Maxime Benalloua from the [Office for Science and Technology](https://www.france-science.org)  of the Embassy of France in the United-States, with whom we collaborated to set the hypotheses examined.
 <!--- (Yves Frenot, Jean-Baptiste Bordes) 
-https://www.france-science.org/-Homepage-English-.html --->
+https://www.france-science.org --->
 
