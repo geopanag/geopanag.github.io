@@ -12,7 +12,7 @@ This December I had the chance to visit Cambridge, where the [Complex Networks](
 It is a young but promising conference that comprises mostly of a blend between physics and computer science papers. I attended the tutorials, keynotes and the sessions on epidemics and machine learning. Below is a write-up that summarizes the most interesting ideas I came across.   
 
 
-## Contents
+## Content
 1. Tutorials 
 2. Keynotes
 3. Talks
