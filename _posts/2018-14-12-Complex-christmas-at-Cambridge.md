@@ -21,7 +21,7 @@ It is a young but promising conference that comprises mostly of a blend between 
 ## Tutorials 
 
 ### Clustering egonetworks leads to better overall clustering 
-Have you noticed how clustering small networks tends to be easier then big ones? 
+Have you noticed how clustering small networks tends to be easier than big ones? 
 Dr. [Silvio Lattanzi](https://sites.google.com/site/silviolattanzi/)'s experiments using [conductance](https://en.wikipedia.org/wiki/Conductance_(graph)) for clustering evaluation showed that clustering nodes in egonetworks produces more accurate results than clustering the whole network. Intuitively, clustering in the microscopic level makes sense because the neighbors of a node tend to be connected in a more consistent manner. A plot of conductance relative to the cluster size reveals how the quality of the clusters increase up to a point but then decreases, as the giant connected component emerges. This indicates the well known octopus structure of real world networks, that consists of a tightly knit core and several whiskers.   
 Thus, we want to somehow use ego-network clustering to improve the general clustering of the network, and a promising idea towards this is the persona graphs. A persona graph is basically a cluster of a node's egonetwork ,severed from it. A copy of the ego-node is created and connected to the nodes of this cluster, resembling the initial node. Applying this transformation for all clusters of all egonetworks facilitates the integration of the micro-clustering into the network. Subsequently, an overlapping clustering method can produce remarkable results in networks that would be impossible to cluster in their initial forms.     
  
