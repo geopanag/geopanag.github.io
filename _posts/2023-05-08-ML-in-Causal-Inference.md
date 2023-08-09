@@ -3,7 +3,7 @@ layout: post
 title: "Machine Learning in Causal Inference"
 date: 2023-08-05
 category: ["all"]
-tags: ["uplift_modeling", "causal_inference", "double_ml"]
+tags: ["Uplift Modeling", "Causal Inference"]
 ---
 
 
@@ -11,15 +11,16 @@ tags: ["uplift_modeling", "causal_inference", "double_ml"]
 Statistical tests for causal inference are ubiquitous, from drug discovery and medical studies to social studies and online platforms, they are at the core of decision-making. 
 A prevalent example is A/B testing, the de facto way to evaluate the potential of a system change before applying it in e-commerce. 
 
-Briefly, the users are split into two random groups (treatment **T** and control **C**), the change is applied in one of them (T=1), and the difference between their response variable **Y** e.g. time spent on the system, is measured ($E[Y_t - Y_c]= \hat{Y}_t - \hat{Y}_c$) to quantify the effect of the treatment. This is called the average treatment effect **ATE** or **uplift** in a randomized control trial (**RCT**). The data also includes several confounders **X** (i.e. features in machine learning) that cover different characteristics of the sample e.g. for a user, they could be the frequency and duration of visits, purchase history, demographics, etc.
+Briefly, the users are split into two random groups (treatment **T** and control **C**), the change is applied in one of them (T=1), and the difference between their response variable **Y** e.g. time spent on the system, is measured ($E[Y_t - Y_c]= \hat{Y}_t - \hat{Y}_c$)$ to quantify the effect of the treatment. This is called the average treatment effect **ATE** or **uplift** in a randomized control trial (**RCT**). The data also includes several confounders **X** (i.e. features in machine learning) that cover different characteristics of the sample e.g. for a user, they could be the frequency and duration of visits, purchase history, demographics, etc.
 
-The big question when you conduct such a trial and gather the responses is, did the users respond because of the treatment or because of an unobserved confounder? In other words, who are the users who responded only because they were treated? Social and medical studies rely on the Conditional Independence Assumption (CIA) to derive conclusions. CIA states that the response is independent of the treatment given the confounders i.e. $Y \perp\!\!\!\!\perp T |X$ i.e. unconfoundedness, but this is not always true, especially in open environments with several unseen confounders, like online systems.
+The big question when you conduct such a trial and gather the responses is, did the users respond because of the treatment or because of an unobserved confounder? In other words, who are the users who responded only because they were treated? Social and medical studies rely on the Conditional Independence Assumption (CIA) to derive conclusions. CIA states that the response is independent of the treatment given the confounders i.e. unconfoundedness, but this is not always true, especially in open environments with several unseen confounders, like online systems.
+[//]: # i.e. $`Y \perp\!\!\!\!\perp T |X`$
 
 To measure the actual effect we would ideally want to find the users in the treatment group with Y=1, that would have Y=0 if T=0, and vice versa for the control group and Y=0. Since we cannot turn back time and reassign treatments such that we get these answers, this is called a **counterfactual** scenario. The outcome of such a counterfactual scenario is what we would like to predict/estimate. One can also think of this as trying to decipher the treatment effect for each individual instead of the whole sample set, so individual treatment effect (ITE).
 Loking at it from a marketing perspective, the marketers divide the users in four categories based on their potential responses to a campaign (i.e. trial):
 
- <center><img src="/images/causal_inf/persuadables.png" width="40%">  
- <em>Taken from the ECML Uplift modeling [tutorial](https://upliftworkshop.ipipan.waw.pl/index_2022.html)</em></center>    
+ <center><img src="/images/causal_inf/persuadables.png" width="40%"> </center>
+ <em>Taken from the ECML Uplift modeling [tutorial](https://upliftworkshop.ipipan.waw.pl/index_2022.html)</em>    
 <br><br>
 
 The **persuadables** represent the aforementioned group of users that we care about, and we can use machine learning to uncover them. 
@@ -28,7 +29,7 @@ The **persuadables** represent the aforementioned group of users that we care ab
 [//]: # Some brief definitions before we talk about methodology:
 [//]: # - Conditional Average Treatment Effect (CATE): The difference between the response variable of the treated and control group in a subgroup of the data conditioned on e.g. a value of a confounder. 
 [//]: # - Heterogeneous treatment effect: The causal effect of the treatment that can vary throughout different subsets of the samples. 
-[//]: # - Propensity score: The probability of a sample/group of samples being treated, given their observed confounders. Its inverse can be used to weigh the samples in ATE, which reduces the bias.
+[//]: # - Propensity score: The probability of a sample/group of samples being treated, given their observed confounders. Its inverse can be used to weigh the samples in **ATE**, which reduces the bias.
 [//]: # - Instrument: A variable that is connected to the independent variable (e.g. treatment) but not to the outcome, generally used to adjust the causal model for confounders.
 
 ## Uplift modeling 
@@ -44,21 +45,15 @@ In the context of a marketing campaign where we want to maximize the adoption of
 7. Find out who is most likely to respond positively to the intervention and promote the product to them.
 
 
-## Double Machine Learning
-
-Generally, classical statistical approaches based on parametric functions,heavily utilized in causal inference, tend to be hindered by high-dimensional confounders.
-ML can be promising in addressing this, but uncovering the actual causal mechanisms of the outcome from the variables is a more involved task compared to simple prediction. 
-If we assume that indeed all confounders are observed, we can decompose the problem in such as way as to utile the power of ML while retaining the main idea of statistical inference as explained by [Chernozhukov et al.](https://www.youtube.com/watch?v=eHOjmyoPCFU).
-
-The idea is that we first try to predict the outcome from the controls and from the treatment seperately, and then combine the model to predict the (heterogeneous) treatment effect.
-This decomposition utilizes the ability of ML to handle the confounders, while keeping the original statisticall approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
-
-The method is a T-learner and at its simplest form works as followes:
+## Meta and Double Learning
+The problem with having one function for both treatment and control groups is that we expect these data to exhibit some heterogeneity, both in confounders and in the outcome variable. 
+We can capture such potential differences by using separate models for treated and control groups. 
+We can simply first predict the outcome of the control and the treatment samples seperately, and then subtract these to get an **ATE** prediction.
+The method is a T-learner:
 1. Build a classifier $F_T$ for $P_T(Y|X)$ on the treatment sample.
 2. Build a classifier $F_C$ for $P_C(Y|X)$ on the control sample.
 3. Get the probabilities for a new $X'$ from both $F_C$ and $F_T$.
 4. Adjust them and compute the difference that represents the uplift.
-
 
 The problem here is that imbalances can induce bias in the final model. It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf).
 1. Train two models $F_C$ and $F_T$ similar to above.
@@ -70,16 +65,21 @@ The problem here is that imbalances can induce bias in the final model. It turns
 Since the X-learner focuses on learning the uplift function itself, it is better able to capture its properties e.g. smoothness, while handling the imbalance that is prevalent between treatment and control groups.
 
 
- <center><img src="/images/causal_inf/metalearners.png" width="60%"> 
+ <center><img src="/images/causal_inf/metalearners.png" width="70%"></center>     
  <em>Image from "Introduction to Causal ML" in KDD 2021 [tutorial](https://causal-machine-learning.github.io/kdd2021-tutorial/)</em>
- </center>    
+
 <br><br>
 
 
+Apart from counterfactual prediction, ML can assist in hypothesis testing due to its resiliense with high dimensional confounders, which hinders classical statistical approaches based on parametric functions.
+Note that uncovering the actual causal mechanisms of the outcome is a more involved task compared to prediction, hence using solely ML does not suffice.
+If we assume that indeed all confounders are observed, we can decompose the causal inference in a way to utile the ML to diminish the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
+The aim in this case is to retrieve a more clear estimation of the treatment effect, and the main idea is to use two ML methods to estimate the propensity score and the outcome. Then use these estimates, along with K-fold partitioning of the samples, to mitigate both the treatment assignment and the outcome estimation bias during the **ATE** estimation.
+This decomposition utilizes the ability of ML to handle the confounders effectively, while keeping the original approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://www.youtube.com/watch?v=eHOjmyoPCFU).
 
-Apart from double ML, some alternatives which we re not going to cover in this post are:
-- Uplift trees: Modify splitting criteria to maximize differences between treated/control responses [Orthogonal random forest for causal inference](https://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.66)
-- Predict directly the persuadable by transforming the outcome class according to the definition above (like an XOR function): $Z_i  = Y_iT_i - (1-Y_i)(1-T_i)$ Assuming that the treatment/control split is balanced, we can compute the ITE by adjusting the output probability: $ITE = 2*P(Z=1|X_i)-1$. There's a straightforward explanation [here](https://www.youtube.com/watch?v=MFnOYNU5sbk).
+Finally, some alternative ML for causal inference which we re not going to cover in this post:
+- [Orthogonal Forests](https://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.66): Modify splitting criteria to maximize differences between treated/control responses.
+- Predict directly the persuadables by transforming the outcome class according to the definition above (like an XOR function): $Z_i  = Y_iT_i - (1-Y_i)(1-T_i)$ Assuming that the treatment/control split is balanced, we can compute the ITE by adjusting the output probability: $ITE = 2*P(Z=1|X_i)-1$. There's a straightforward explanation [here](https://www.youtube.com/watch?v=MFnOYNU5sbk).
 
 
 
@@ -91,7 +91,7 @@ For our experiments, we compare three well-known packages that facilitate uplift
 
 
 | Dataset    | Treatment | Control | Converted | Not Converted |
-|------------|-----------|---------|-----------|---------------|
+|:------------:|:-----------:|:---------:|:-----------:|:---------------:|
 | [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data) | 91543     | 90950   | 117615    | 64878         |
 | [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)         | 11882655  | 2096937 | 40774     | 13938818      |
 
@@ -99,6 +99,7 @@ We compare **S**, **T**, and **X** learners based on XGBoost (**XGB**) and Logis
 
 Evaluating the uplift prediction is a relatively open question. In this case, since there are multiple datasets and methods, we rely on a scalar evaluation for comparison, but for a specific use case, plots provide a bigger picture, like in this [analysis](https://juanitorduz.github.io/uplift/).
 More specifically, an intuitive way to evaluate the model is by sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
+
 To this end we used the uplift for the top 40% of the dataset, similar to Sklift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
 A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable, while the area under the QINI or Uplift curve may also be useful, although in my analysis they where inconsistent through methods.
 
@@ -111,7 +112,7 @@ A plot of the cumulative gain from the uplift percentiles as described [here](ht
 
 
 As we expected the X-learner outperforms the other methods but not predominantly. The result is more clear for RetailHero, where the performance increases with the complexity of the method for both, XGB and LR classifiers.
-The CausalML X-learner seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, specially for S and T methods.
+The CausalML X-learner seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, specially for **S** and **T** methods.
 
 The large-scale size and the major imbalance between treatment/control renders Criteo a much harder baseline, and challenges the scalability of the methods. 
 This happens to the CausalML and SKlift case for **S** method where the **LR** fails to converge. On the other hand EconML always provides an uplift but is quite diminished, possibly due to the dataset's scale.
@@ -120,8 +121,8 @@ Overall the **T** and **LR** method seems to perform better in this case, and SK
 The code to reproduce the analysis can be found in [github](https://github.com/geopanag/causal_inf_ml) 
 Apart from the experiments, I would sum it up the takeaways from using the three packages like this:
 - CausalML: big range of ML methods, explainability with sensitivity analysis, feature importance etc. 
+- EconML: detailed documentation, orthogonal double ML, more experimental settings e.g. instruments, dynamic treatment etc.
 - Sklift: straight forward to use, numerous evaluation metrics and plots, but not so many methods.
-- EconML: detailed documentation with theoretical references, covers more experimental settings e.g. estimation with instruments, dynamic treatment, distinct inference methods, but it is more elaborate in use.
 
 
 
