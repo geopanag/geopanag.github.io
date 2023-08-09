@@ -7,7 +7,7 @@ tags: ["Uplift Modeling", "Causal Inference"]
 ---
 
 
-## Causal Inference and the problem of unconfoundedness
+## Causal inference and the problem of unconfoundedness
 Statistical tests for causal inference are ubiquitous, from drug discovery and medical studies to social studies and online platforms, they are at the core of decision-making. 
 A prevalent example is A/B testing, the de facto way to evaluate the potential of a system change before applying it in e-commerce. 
 
