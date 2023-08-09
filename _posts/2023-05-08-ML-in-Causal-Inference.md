@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ML-powered Causal Inference"
+title: "Machine Learning in Causal Inference"
 date: 2023-08-05
 category: ["all"]
 tags: ["uplift_modeling", "causal_inference", "double_ml"]
@@ -8,19 +8,20 @@ tags: ["uplift_modeling", "causal_inference", "double_ml"]
 
 
 ## Causal Inference and the problem of unconfoundedness
-Statistical tests for causal inference are ubiquitous, from drug discovery and medical studies to social studies and online platforms, they are at the core of decision making. 
+Statistical tests for causal inference are ubiquitous, from drug discovery and medical studies to social studies and online platforms, they are at the core of decision-making. 
 A prevalent example is A/B testing, the de facto way to evaluate the potential of a system change before applying it in e-commerce. 
 
-Briefly, the users are split in two random groups (treatment **T** and control **C**), the change is applied in one of them (T=1), and the difference between their response variable **Y** e.g. time spent on the system, is measured ($E[Y_t - Y_c]= \hat{Y}_t - \hat{Y}_c) to quantify the effect of the treatment. This is called the average treatment effect **ATE** or **uplift** in a randomized control trial (**RCT**). The data also includes several confounders **X** (i.e. features in machine learning) that cover different characteristics of the sample e.g. for a user they could be the frequency and duration of visits, purchase history, demographics etc.
+Briefly, the users are split into two random groups (treatment **T** and control **C**), the change is applied in one of them (T=1), and the difference between their response variable **Y** e.g. time spent on the system, is measured ($E[Y_t - Y_c]= \hat{Y}_t - \hat{Y}_c) to quantify the effect of the treatment. This is called the average treatment effect **ATE** or **uplift** in a randomized control trial (**RCT**). The data also includes several confounders **X** (i.e. features in machine learning) that cover different characteristics of the sample e.g. for a user, they could be the frequency and duration of visits, purchase history, demographics, etc.
 
-The big question when you conduct such a trial and gather the responses is, did the users respond because of the treatment or because of an unobserved confounder? In other words, who are the users who responded only because they were treated? Social and medical studies rely on the Conditional Independence Assumption (CIA) to derive conclusions. CIA states that the response is independent of the treatment given the confounders i.e. $Y \perp\!\!\!\!\perp T |X $ i.e. unconfoundedness, but this is not always true, specially in open environments with several unseen confounders, like online systems.
+The big question when you conduct such a trial and gather the responses is, did the users respond because of the treatment or because of an unobserved confounder? In other words, who are the users who responded only because they were treated? Social and medical studies rely on the Conditional Independence Assumption (CIA) to derive conclusions. CIA states that the response is independent of the treatment given the confounders i.e. $Y \perp\!\!\!\!\perp T |X $ i.e. unconfoundedness, but this is not always true, especially in open environments with several unseen confounders, like online systems.
 
-To measure the actual effect we would ideally want to find the users in the treatment group with Y=1, that would have Y=0 if T=0, and vice versa for the control group and Y=0. Since we cannot turn back time and reassign treatments such that we get these answers, this is called a **counterfactual** scenario. The outcome of such a counter factual scenario is what we would like to predict/estimate. One can also think of this as trying to decipher the treatment effect for each individual instead of the whole sample set, so individual treatment effect (ITE).
-Loking it from a marketing perspective, the marketers divide the users in four categories based on their potential responses to a campaign (i.e. trial):
+To measure the actual effect we would ideally want to find the users in the treatment group with Y=1, that would have Y=0 if T=0, and vice versa for the control group and Y=0. Since we cannot turn back time and reassign treatments such that we get these answers, this is called a **counterfactual** scenario. The outcome of such a counterfactual scenario is what we would like to predict/estimate. One can also think of this as trying to decipher the treatment effect for each individual instead of the whole sample set, so individual treatment effect (ITE).
+Loking at it from a marketing perspective, the marketers divide the users in four categories based on their potential responses to a campaign (i.e. trial):
 
- <center><img src="/images/causal_inf/persuadables.jpeg" width="20%">   <img src="/images/causal_inf/persuadables.jpeg" width="20%"> </center>    
+ <center><img src="/images/causal_inf/persuadables.jpeg" width="20%">  </center>    
 <br><br>
-%taken from the documentation of [scikit-uplift](https://www.uplift-modeling.com/en/v0.3.0/user_guide/introduction/clients.html)
+
+taken from the documentation of [scikit-uplift](https://www.uplift-modeling.com/en/v0.3.0/user_guide/introduction/clients.html)
 taken from the ECML Uplift modeling [tutorial](https://upliftworkshop.ipipan.waw.pl/index_2022.html). 
 The **persuadables** represent the aforementioned group of users that we care about. 
 
@@ -33,14 +34,14 @@ Some definitions before we talk about methods:
 
 ## Uplift modeling 
 
-In the context of a marketing campaign where we want to maximize the adoption of our product, performing a large scale RCT could be detrimental to the revenue depending on the treatment's outcome. In contrast, if we can use a small set of data to identify the persuadable users in a consistent manner, we can use this knowledge to target specific users that are similar for the general campaign. The steps of a typical **uplift modeling** pipeline are:
+In the context of a marketing campaign where we want to maximize the adoption of our product, performing a large-scale RCT could be detrimental to the revenue depending on the treatment's outcome. In contrast, if we can use a small set of data to identify the persuadable users in a consistent manner, we can use this knowledge to target specific users that are similar to the general campaign. The steps of a typical **uplift modeling** pipeline are:
 
 1. Run a **small-scale** RCT advertising the product of the campaign in the treatment group. 
 2. Gather historical data about the chosen users, their characteristics, and their responses to the interventions.
 3. Combine the data from the treatment and control group, adding as a binary feature whether the sample is treated or not.
 4. Train a model to estimate the response.
 5. Assess the performance of the model using evaluation metrics such as uplift or uplift lift curve.
-6. Use the model to other users to find out who are most likely to respond positively to the intervention.
+6. Use the model to other users to find out who is most likely to respond positively to the intervention.
 7. Promote the product to users with the highest predicted responses.
 
 
@@ -97,18 +98,18 @@ uplift forests [-](https://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.66)
 
 uplift trees figure from tutorial
 
-A simple yet effective trick is to try and predict directly the persuadables, which means transforming the outcome class according to the definition above (like a XOR function):
+A simple yet effective trick is to try and predict directly the persuadable, which means transforming the outcome class according to the definition above (like an XOR function):
 $Z_i  = Y_iT_i - (1-Y_i)(1-T_i)$
-Given the trained model with this class, and assuming that the treatnment/control split is balanced, we can compute the ITE by adjusting the output probability:
+Given the trained model with this class, and assuming that the treatment/control split is balanced, we can compute the ITE by adjusting the output probability:
 $ITE = 2*P(Z=1|X_i)-1$
-There's a straight forward explanation [here](https://www.youtube.com/watch?v=MFnOYNU5sbk).
+There's a straightforward explanation [here](https://www.youtube.com/watch?v=MFnOYNU5sbk).
 
 
 
 
 
 ### Experiments:
-For our experiments we compare three well-known packages that facilitate uplift learning techniques in python: 
+For our experiments, we compare three well-known packages that facilitate uplift learning techniques in python: 
 - [EconML](https://github.com/microsoft/EconML)
 - [CausalML](https://github.com/uber/causalml)  
 - [SKLift](https://github.com/maks-sh/scikit-uplift)
@@ -117,12 +118,12 @@ Two datasets coming from recommender systems, with binary treatments and outcome
 - [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data)
 - [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)
 
-We compare an S, T and X learners based on XGBoost. Note that SKlift does not include an X-learner, so as a substitute, we use the two-model dependent data representation model that utilizes the treatment model in a T-learner that is aware of the control model predictions. It is not the same but should be close. The train/test split is set to 50%, as this is a more realistic setting for uplift modeling compared to the regular ML 80-20%.
+We compare S, T, and X learners based on XGBoost. Note that SKlift does not include an X-learner, so as a substitute, we use the two-model dependent data representation model that utilizes the treatment model in a T-learner that is aware of the control model predictions. It is not the same but should be close. The train/test split is set to 50%, as this is a more realistic setting for uplift modeling compared to the regular ML 80-20%.
 
 Evaluating the uplift prediction is a relatively open question. In this case, since there are multiple datasets and methods, we rely on a scalar evaluation for comparison, but for a specific use case, plots provide a bigger picture, like in this [analysis](https://juanitorduz.github.io/uplift/).
-More specifically, an intuitive way to evaluate the model is sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
-To this end we used the uplift for the top 40% of the dataset, similar to sklift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
-A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable, while area under the QINI or Uplift curve may also be usefull, although in my analysis these where incosistent through methods.
+More specifically, an intuitive way to evaluate the model is by sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
+To this end we used the uplift for the top 40% of the dataset, similar to Sklift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
+A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable, while the area under the QINI or Uplift curve may also be useful, although in my analysis they where inconsistent through methods.
 
 <center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="20%"> </center>    
 <br><br>
@@ -144,9 +145,9 @@ EconML: detailed documentation with theoretical references, covers more experime
 ## Food for thought.
 
 This was only a small part of how ML can be used for causal inference mainly in e-commerce settings. In fact causality is much more involved in most scientific studies, including block designs, instruments etc. and the role of ML in this is still nascent and exciting to explore. Some open issues I found interesting digging through ML for causal inference:
-- Instead of defining the whole sample set during the experimental design, can we build it as we go? From Thompson sampling to more involved adaptive experimentation methods like [AX](https://ax.dev/), which uses bandits or bayesian optimzation, we can reduce the sample size of the experiment and still derive sound conclusions. We should be carefull about the bias in sample means collected by such [methods](https://arxiv.org/pdf/1902.00746.pdf) though.
+- Instead of defining the whole sample set during the experimental design, can we build it as we go? From Thompson sampling to more involved adaptive experimentation methods like [AX](https://ax.dev/), which uses bandits or Bayesian optimization, we can reduce the sample size of the experiment and still derive sound conclusions. We should be careful about the bias in sample means collected by such [methods](https://arxiv.org/pdf/1902.00746.pdf) though.
 - How to design the initial trial such that is random yet informative and diverse enough to extrapolate the conclusions to the whole user base safely? Can we use some type of [optimal experimental design](https://www.jmlr.org/papers/volume22/20-1023/20-1023.pdf) methods akin to active learning, e.g. based on submodularity?
-- Counterfactual estimation is generally useful in recommender systems. Specifically the question is, given a logged dataset which is gathered by a specific recommendation policy, meaning it is inherently biased by the user's choices, how can we derive unbiased conclusions or evaluate other policies using it? This naturally entails estimating [counterfactuals]((https://counterfactual-ml.github.io/kdd2022-tutorial/)) and is refered as [off-policy learning/evaluation](https://sites.google.com/view/practical-bandits-tutorial/).
+- Counterfactual estimation is generally useful in recommender systems. Specifically, the question is, given a logged dataset that is gathered by a specific recommendation policy, meaning it is inherently biased by the user's choices, how can we derive unbiased conclusions or evaluate other policies using it? This naturally entails estimating [counterfactuals]((https://counterfactual-ml.github.io/kdd2022-tutorial/)) and is referred to as [off-policy learning/evaluation](https://sites.google.com/view/practical-bandits-tutorial/).
 - In social or online experiments there are connections that define potential confounders e.g. due to friendship spillover effects in social media or collaborative filtering in marketplaces, which makes the experiments much more tricky. We can address the interference caused by the network with [graph cluster randomization](https://dl.acm.org/doi/pdf/10.1145/2487575.2487695?casa_token=dBLX5rN7_kUAAAAA:_TMwA-TK5LlIA6ivgMmEeutYyy4kktMkBg5P0MbQRnhbuFOyliiquXtBzchk7jwOGl_R24mpN26o). We can also learn to predict counterfactuals controlling for both, the confounders and the connections using [hypergraph neural networks](https://arxiv.org/pdf/2207.04049.pdf)
 - Are the current uplift modeling assumptions valid in real-world applications? An insightful [critique](https://arxiv.org/pdf/2304.10900.pdf) on AB testing with ML.
 - E-commerce platforms tend to have large-scale heterogeneous data, can we pair more elaborate neural architectures with uplift modeling techniques to improve them?
