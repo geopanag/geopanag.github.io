@@ -45,34 +45,22 @@ In the context of a marketing campaign where we want to maximize the adoption of
 
 
 ## Double Machine Learning
-Generally, ML is good for prediction but uncovering the actual causal mechanisms of the outcome from the variables is a more involved task. 
-If we assume that indeed all confounders are observed, we can estimate heterogeneous treatment effects 
 
-This decomposition has theoretically faster rates of converges to the optimum ](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false)
-fastest rates of convergence
-% from econml
-https://www.youtube.com/watch?v=eHOjmyoPCFU
+Generally, classical statistical approaches based on parametric functions,heavily utilized in causal inference, tend to be hindered by high-dimensional confounders.
+ML can be promising in addressing this, but uncovering the actual causal mechanisms of the outcome from the variables is a more involved task compared to simple prediction. 
+If we assume that indeed all confounders are observed, we can decompose the problem in such as way as to utile the power of ML while retaining the main idea of statistical inference as explained by [Chernozhukov et al.](https://www.youtube.com/watch?v=eHOjmyoPCFU).
 
-Double Machine Learning is a method for estimating (heterogeneous) treatment effects when all potential confounders/controls (factors that simultaneously had a direct effect on the treatment decision in the collected data and the observed outcome) are observed, but are either too many (high-dimensional) for classical statistical approaches to be applicable or their effect on the treatment and outcome cannot be satisfactorily modeled by parametric functions (non-parametric). Both of these latter problems can be addressed via machine learning techniques (see e.g. [Chernozhukov2016]).
+The idea is that we first try to predict the outcome from the controls and from the treatment seperately, and then combine the model to predict the (heterogeneous) treatment effect.
+This decomposition utilizes the ability of ML to handle the confounders, while keeping the original statisticall approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
 
-The method reduces the problem to first estimating two predictive tasks:
-
-predicting the outcome from the controls,
-
-predicting the treatment from the controls;
-
-Then the method combines these two predictive models in a final stage estimation so as to create a model of the heterogeneous treatment efffect. The approach allows for arbitrary Machine Learning algorithms to be used for the two predictive tasks, while maintaining many favorable statistical properties related to the final model (e.g. small mean squared error, asymptotic normality, construction of confidence intervals).
-
-
-
-A simple T-learner works as followes:
+The method is a T-learner and at its simplest form works as followes:
 1. Build a classifier $F_T$ for $P_T(Y|X)$ on the treatment sample.
 2. Build a classifier $F_C$ for $P_C(Y|X)$ on the control sample.
 3. Get the probabilities for a new $X'$ from both $F_C$ and $F_T$.
 4. Adjust them and compute the difference that represents the uplift.
 
 
-It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf).
+The problem here is that imbalances can induce bias in the final model. It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf).
 1. Train two models $F_C$ and $F_T$ similar to above.
 2. Compute diff $D_T$ between the output of the control model with the treatment group confounders $F_C(X_T)$ and treatment outcome Y_T.
 3. Do the opposite for $D_C = F_T(X_C) - Y_C$
