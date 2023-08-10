@@ -28,7 +28,7 @@ These tweets do not include only country-specific languages, e.g., french for fr
 We first study the tweeting activity patterns of the users with regards to the pandemic. The left Figure below shows the number of tweets, retweets and favorites as a function of time. Clearly, users became more active from March 2020. A very large number of retweets was posted between March 10 and March 13. The right Figure shows the p-value derived by computing granger causality between the time series of the left Figure and the time series that emerge from three actual pandemic metrics, namely the number of confirmed cases, the daily increase/decrease in the number of confirmed cases (delta), and the number of deaths. The results indicate a strong relationship between the number of tweets produced (last row of heatmap) and the pandemic metrics.
 
 
-<center><img src="/images/covid_tweets/stats.png" width="40%"> </center> <center><img src="/images/covid_tweets/heatmap.png" width="40%"> </center>
+<center><img src="/images/covid_tweets/stats.png" width="25%">  <img src="/images/covid_tweets/heatmap.png" width="25%"> </center>
 <br><br>
 
 
@@ -39,25 +39,12 @@ Given our set of unique tweets, we create a graph where nodes correspond to twee
 
 
 
-<center><img src="/images/covid_tweets/feb15.png" width="20%"> </center> 
- <em>Feb 15</em>  
+<center><img src="/images/covid_tweets/feb15.png" width="20%"> <img src="/images/covid_tweets/feb22.png" width="20%">  <img src="/images/covid_tweets/feb29.png" width="20%"></center> 
+ <em>Feb 15, 22 & 29</em>  
 
- <center><img src="/images/covid_tweets/feb22.png" width="20%"> </center> 
- <em>Feb 22</em>
+ <center><img src="/images/covid_tweets/mar1.png" width="20%"> <img src="/images/covid_tweets/mar2.png" width="20%">  <img src="/images/covid_tweets/mar3.png" width="20%"></center> 
+ <em>Mar 1, 2 & 3</em>      
 
- <center><img src="/images/covid_tweets/feb29.png" width="20%"> </center> 
- <em>Feb 29</em>      
-<br><br>
-
- <center><img src="/images/covid_tweets/mar1.png" width="20%"> </center> 
- <em>Mar 1</em>      
-
- <center><img src="/images/covid_tweets/mar2.png" width="20%"> </center> 
- <em>Mar 2</em>      
-
- <center><img src="/images/covid_tweets/mar3.png" width="20%"> </center> 
- <em>Mar 3</em>      
-<br><br>
 
 
 For example, a more detailed view of the third graph (i.e., February 29) is given in the Figure shown below. As we can see, some of the biggest components of the graph correspond to tweets of a single user (i.e., @BBC). We also illustrate the most frequent terms of the tweets posted by these users. Interestingly, some of the tweets contain news posted by official organizations (such as BBC and DHSC of the UK government), while others correspond to personal opinions about the origin of the virus and the policies around COVID-19.  

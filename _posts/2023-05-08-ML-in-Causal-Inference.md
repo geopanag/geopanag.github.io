@@ -55,7 +55,7 @@ The method is called a T-learner:
 3. Get the probabilities for a new $X'$ from both $F_C$ and $F_T$.
 4. Adjust them and compute the difference that represents the uplift.
 
-The problem here is that imbalances can induce bias in the final model. It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf).
+Another problem here is that imbalances between the groups can induce bias in the final model. It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf), enter the X-learner.
 1. Train two models $F_C$ and $F_T$ similar to above.
 2. Compute diff $D_T$ between the output of the control model with the treatment group confounders $F_C(X_T)$ and treatment outcome $Y_T$.
 3. Do the opposite for $D_C = F_T(X_C) - Y_C$
@@ -67,15 +67,14 @@ Since the X-learner focuses on learning the uplift function itself, it is better
 
  <center><img src="/images/causal_inf/metalearners.png" width="80%"></center>     
  <em>Image from "Introduction to Causal ML" in KDD 2021 [tutorial](https://causal-machine-learning.github.io/kdd2021-tutorial/)</em>
-
 <br><br>
 
 
 Apart from counterfactual prediction, ML can assist in hypothesis testing due to its resiliense with high dimensional confounders, which hinders classical statistical approaches based on parametric functions.
 However uncovering the actual causal mechanisms of the outcome is a more involved task compared to prediction, hence using solely ML does not suffice.
-If we assume that indeed all confounders are observed, we can decompose the causal inference in a way to utile the ML to diminish the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
+If we assume that indeed all confounders are observed, we can decompose the causal inference in such a way  hat we can utilize the ML to diminish the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
 The aim in this case is to retrieve a more clear estimation of the treatment effect, and the main idea is to use two ML methods to estimate the propensity score and the outcome. Then use these estimates, along with K-fold partitioning of the samples, to mitigate both the treatment assignment and the outcome estimation bias during the **ATE** estimation.
-This decomposition utilizes the ability of ML to handle the confounders effectively, while keeping the original approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://www.youtube.com/watch?v=eHOjmyoPCFU).
+This decomposition uses ML to handle the confounders effectively, while keeping the original approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://www.youtube.com/watch?v=eHOjmyoPCFU).
 
 Finally, some alternative ML for causal inference which we re not going to cover in this post:
 - [Orthogonal Forests](https://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.66): Modify splitting criteria to maximize differences between treated/control responses.
@@ -101,7 +100,7 @@ Evaluating the uplift prediction is a relatively open question. In this case, si
 More specifically, an intuitive way to evaluate the model is by sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
 
 To this end we used the uplift for the top 40% of the dataset, similar to Sklift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
-A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable, while the area under the QINI or Uplift curve may also be useful, although in my analysis they where inconsistent through methods.
+A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in my analysis they where inconsistent through methods.
 
 <center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="60%"> 
 </center>    
@@ -112,14 +111,14 @@ A plot of the cumulative gain from the uplift percentiles as described [here](ht
 
 
 As we expected the X-learner outperforms the other methods but not predominantly. The result is more clear for RetailHero, where the performance increases with the complexity of the method for both, **XGB** and **LR** classifiers.
-The CausalML X-learner seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, specially for **S** and **T** methods.
+The CausalML **X** seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, specially for **S** and **T**.
 
 The large-scale size and the major imbalance between treatment/control renders Criteo a much harder baseline, and challenges the scalability of the methods. 
-This happens to the CausalML and SKlift case for **S** method where the **LR** fails to converge. On the other hand EconML always provides an uplift but is quite diminished, possibly due to the dataset's scale.
+This happens to the CausalML and SKlift case for **S** where the **LR** fails to converge. On the other hand EconML always provides an uplift but is quite diminished, possibly due to the dataset's scale.
 Overall the **T** and **LR** method seems to perform better in this case, and SKlift provides overall higher uplift.  
 
-The code to reproduce the analysis can be found in [github](https://github.com/geopanag/causal_inf_ml) 
-Apart from the experiments, I would sum it up the takeaways from using the three packages like this:
+The code to reproduce the analysis can be found in [github](https://github.com/geopanag/causal_inf_ml).
+Apart from the experiments, I would sum it up the key takeaways from using the three packages as:
 - CausalML: big range of ML methods, explainability with sensitivity analysis, feature importance etc. 
 - EconML: detailed documentation, orthogonal double ML, more experimental settings e.g. instruments, dynamic treatment etc.
 - Sklift: straight forward to use, numerous evaluation metrics and plots, but not so many methods.
