@@ -118,7 +118,7 @@ This happens to the CausalML and SKlift case for **S** where the **LR** fails to
 Overall the **T** and **LR** method seems to perform better in this case, and SKlift provides overall higher uplift.  
 
 The code to reproduce the analysis can be found in [github](https://github.com/geopanag/causal_inf_ml).
-Apart from the experiments, I would sum it up the key takeaways from using the three packages as:
+Apart from the experiments, I would sum up the key takeaways from using the three packages as:
 - CausalML: big range of ML methods, explainability with sensitivity analysis, feature importance etc. 
 - EconML: detailed documentation, orthogonal double ML, more experimental settings e.g. instruments, dynamic treatment etc.
 - Sklift: straight forward to use, numerous evaluation metrics and plots, but not so many methods.
