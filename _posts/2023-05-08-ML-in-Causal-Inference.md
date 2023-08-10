@@ -83,16 +83,13 @@ Finally, some alternative ML for causal inference which we re not going to cover
 
 
 ### Experiments:
-For our experiments, we compare three well-known packages that facilitate uplift learning techniques in python, using two datasets coming from recommender systems, with binary treatments and outcomes:: 
-- [EconML](https://github.com/microsoft/EconML)
-- [CausalML](https://github.com/uber/causalml)  
-- [SKlift](https://github.com/maks-sh/scikit-uplift)
+For our experiments, we compare three well-known packages that facilitate uplift learning techniques in python, using two datasets coming from recommender systems, with binary treatments and outcomes: [SKlift](https://github.com/maks-sh/scikit-uplift), [CausalML](https://github.com/uber/causalml) and [EconML](https://github.com/microsoft/EconML).
 
 
-| Dataset    | Treatment | Control | Converted |   Not Converted |
-|:------------:|:-----------:|:---------:|:-----------:|:---------------:|
-| [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data) |     91543       | 90950   | 117615    | 64878         |
-| [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)         |   11882655    | 2096937 | 40774     | 13938818      |
+| Dataset   | Treatment | Control | Converted | Not Converted |
+|:-----------------------------------------:|:-----------|:---------:|:-----------:|---------------:|
+| [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data)  |     91543         | 90950   | 117615    | 64878         |
+| [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)          |   11882655        | 2096937 | 40774     | 13938818      |
 
 We compare **S**, **T**, and **X** learners based on XGBoost (**XGB**) and Logistic Regression (**LR**). The propensity model of the X-learner is by default an XGBoost classifier. Note that SKlift does not include an X-learner, so as a substitute, we use the two-model dependent data representation (**DDR**) model that utilizes the treatment model in a T-learner that is aware of the control model predictions. The train/test split is set to 50%, as this is a more realistic setting for uplift modeling compared to the regular ML 80-20%.
 
