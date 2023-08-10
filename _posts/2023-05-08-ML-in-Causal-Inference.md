@@ -65,7 +65,7 @@ The problem here is that imbalances can induce bias in the final model. It turns
 Since the X-learner focuses on learning the uplift function itself, it is better able to capture its properties e.g. smoothness, while handling the imbalance that is prevalent between treatment and control groups.
 
 
- <center><img src="/images/causal_inf/metalearners.png" width="70%"></center>     
+ <center><img src="/images/causal_inf/metalearners.png" width="80%"></center>     
  <em>Image from "Introduction to Causal ML" in KDD 2021 [tutorial](https://causal-machine-learning.github.io/kdd2021-tutorial/)</em>
 
 <br><br>
