@@ -16,7 +16,7 @@ About a week later, we started gathering respective data for France, Italy, and 
 
 
 
- <center><img src="/images/covid_tweets/table.png" width="50%"> </center>
+ <center><img src="/images/covid_tweets/table.png" width="40%"> </center>
 <br><br>
 
 
@@ -39,23 +39,23 @@ Given our set of unique tweets, we create a graph where nodes correspond to twee
 
 
 
-<center><img src="/images/covid_tweets/feb15.png" width="40%"> </center> 
+<center><img src="/images/covid_tweets/feb15.png" width="20%"> </center> 
  <em>Feb 15</em>  
 
- <center><img src="/images/covid_tweets/feb22.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/feb22.png" width="20%"> </center> 
  <em>Feb 22</em>
 
- <center><img src="/images/covid_tweets/feb29.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/feb29.png" width="20%"> </center> 
  <em>Feb 29</em>      
 <br><br>
 
- <center><img src="/images/covid_tweets/mar1.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/mar1.png" width="20%"> </center> 
  <em>Mar 1</em>      
 
- <center><img src="/images/covid_tweets/mar2.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/mar2.png" width="20%"> </center> 
  <em>Mar 2</em>      
 
- <center><img src="/images/covid_tweets/mar3.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/mar3.png" width="20%"> </center> 
  <em>Mar 3</em>      
 <br><br>
 
@@ -64,7 +64,7 @@ For example, a more detailed view of the third graph (i.e., February 29) is give
 
 
 
- <center><img src="/images/covid_tweets/circle_plot.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/circle_plot.png" width="60%"> </center> 
  <em>Individual components and their most frequent words on February 29</em>      
 <br><br>
 
@@ -74,7 +74,7 @@ After the 1st of March, however, COVID-19 has become a very central issue on Twi
 
 In order to discern any type of opinion groups inside the main component, we extracted it and applied a community detection algorithm based on weighted modularity.  We next computed the word cloud of the most frequent hashtags in the tweets of each community. The word cloud is shown below. 
 
- <center><img src="/images/covid_tweets/word_graph.png" width="40%"> </center> 
+ <center><img src="/images/covid_tweets/word_graph.png" width="65%"> </center> 
  <em>Communities of the tweet graph on March 10th and their most frequent hashtags</em>      
 <br><br>
 
