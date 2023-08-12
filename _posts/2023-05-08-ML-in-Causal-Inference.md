@@ -41,7 +41,7 @@ In the context of a marketing campaign where we want to maximize the adoption of
 3. Combine the data from the treatment and control group, adding as a binary feature whether the sample is treated or not $X' = [X,T]$.
 4. Train a model to estimate the response $F(X') = Y$.
 5. Assess the performance of $F$ using either standard cross-valdiation or uplift evaluation metrics which we briefly describe below.
-6. Use $F$ to get the predicted responses unseen from users outside the campaign.
+6. Use $F$ to get the predicted responses for users outside the campaign.
 7. Find out who is most likely to respond positively to the intervention and promote the product to them.
 
 
@@ -55,7 +55,7 @@ The method is called a T-learner:
 3. Get the probabilities for a new $X'$ from both $F_C$ and $F_T$.
 4. Adjust them and compute the difference that represents the uplift.
 
-Another problem here is that imbalances between the groups can induce bias in the final model. It turns out we can alleviate this bias with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf), enter the X-learner.
+Another problem here is that imbalances between the groups can induce bias in the final model. It turns out we can alleviate it with [meta-learning](https://www.pnas.org/content/pnas/116/10/4156.full.pdf), enter the X-learner.
 1. Train two models $F_C$ and $F_T$ similar to above.
 2. Compute diff $D_T$ between the output of the control model with the treatment group confounders $F_C(X_T)$ and treatment outcome $Y_T$.
 3. Do the opposite for $D_C = F_T(X_C) - Y_C$
@@ -72,8 +72,8 @@ Since the X-learner focuses on learning the uplift function itself, it is better
 
 Apart from counterfactual prediction, ML can assist in hypothesis testing due to its resiliense with high dimensional confounders, which hinders classical statistical approaches based on parametric functions.
 However uncovering the actual causal mechanisms of the outcome is a more involved task compared to prediction, hence using solely ML does not suffice.
-If we assume that indeed all confounders are observed, we can decompose the causal inference in such a way  hat we can utilize the ML to diminish the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
-The aim in this case is to retrieve a more clear estimation of the treatment effect, and the main idea is to use two ML methods to estimate the propensity score and the outcome. Then use these estimates, along with K-fold partitioning of the samples, to mitigate both the treatment assignment and the outcome estimation bias during the **ATE** estimation.
+If we assume that indeed all confounders are observed, we can adjust the causal inference mechanism in in order to use ML to correct the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
+The aim in this case is to retrieve a more clear estimation of the treatment effect, and the main idea is to use two ML methods to estimate the propensity score and the outcome. Subsequently, use these estimates, along with K-fold partitioning of the samples, to mitigate both the treatment assignment and the outcome estimation bias during the **ATE** estimation.
 This decomposition uses ML to handle the confounders effectively, while keeping the original approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://www.youtube.com/watch?v=eHOjmyoPCFU).
 
 Finally, some alternative ML for causal inference which we re not going to cover in this post:
@@ -96,7 +96,7 @@ We compare **S**, **T**, and **X** learners based on XGBoost (**XGB**) and Logis
 Evaluating the uplift prediction is a relatively open question. In this case, since there are multiple datasets and methods, we rely on a scalar evaluation for comparison, but for a specific use case, plots provide a bigger picture, like in this [analysis](https://juanitorduz.github.io/uplift/).
 More specifically, an intuitive way to evaluate the model is by sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
 
-To this end we used the uplift for the top 40% of the dataset, similar to Sklift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
+To this end we used the uplift for the top 40% of the dataset, similar to SKlift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
 A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in my analysis they where inconsistent through methods.
 
 <center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="60%"> 
@@ -129,7 +129,7 @@ This was only a small part of how ML can be used for causal inference mainly in 
 - Instead of defining the whole sample set during the experimental design, can we build it as we go? From Thompson sampling to more involved adaptive experimentation methods like [AX](https://ax.dev/), which uses bandits or Bayesian optimization, we can reduce the sample size of the experiment and still derive sound conclusions. We should be careful about the bias in sample means collected by such [methods](https://arxiv.org/pdf/1902.00746.pdf) though.
 - How to design the initial trial such that is random yet informative and diverse enough to extrapolate the conclusions to the whole user base safely? Can we use some type of [optimal experimental design](https://www.jmlr.org/papers/volume22/20-1023/20-1023.pdf) methods akin to active learning, e.g. based on submodularity?
 - Counterfactual estimation is generally useful in recommender systems. Specifically, the question is, given a logged dataset that is gathered by a specific recommendation policy, meaning it is inherently biased by the user's choices, how can we derive unbiased conclusions or evaluate other policies using it? This naturally entails estimating [counterfactuals]((https://counterfactual-ml.github.io/kdd2022-tutorial/)) and is referred to as [off-policy learning/evaluation](https://sites.google.com/view/practical-bandits-tutorial/).
-- In social or online experiments there are connections that define potential confounders e.g. due to friendship spillover effects in social media or collaborative filtering in marketplaces, which makes the experiments much more tricky. We can address the interference caused by the network with [graph cluster randomization](https://dl.acm.org/doi/pdf/10.1145/2487575.2487695?casa_token=dBLX5rN7_kUAAAAA:_TMwA-TK5LlIA6ivgMmEeutYyy4kktMkBg5P0MbQRnhbuFOyliiquXtBzchk7jwOGl_R24mpN26o). We can also learn to predict counterfactuals controlling for both, the confounders and the connections using [hypergraph neural networks](https://arxiv.org/pdf/2207.04049.pdf)
+- In social or online experiments there are connections that define potential confounders e.g. due to friendship spillover effects in social media or collaborative filtering in marketplaces, which makes the experiments much more tricky. We can address the interference caused by the network with [graph cluster randomization](https://dl.acm.org/doi/pdf/10.1145/2487575.2487695?casa_token=dBLX5rN7_kUAAAAA:_TMwA-TK5LlIA6ivgMmEeutYyy4kktMkBg5P0MbQRnhbuFOyliiquXtBzchk7jwOGl_R24mpN26o). We can also learn to predict counterfactuals controlling for both, the confounders and the connections using [hypergraph neural networks](https://arxiv.org/pdf/2207.04049.pdf).
 - Are the current uplift modeling assumptions valid in real-world applications? An insightful [critique](https://arxiv.org/pdf/2304.10900.pdf) on AB testing with ML.
 - E-commerce platforms tend to have large-scale heterogeneous data, can we pair more elaborate neural architectures with uplift modeling techniques to improve them?
 
