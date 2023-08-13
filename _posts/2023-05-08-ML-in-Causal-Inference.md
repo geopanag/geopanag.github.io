@@ -65,7 +65,7 @@ Another problem here is that imbalances between the groups can induce bias in th
 Since the X-learner focuses on learning the uplift function itself, it is better able to capture its properties e.g. smoothness, while handling the imbalance that is prevalent between treatment and control groups.
 
 
- <center><img src="/images/causal_inf/metalearners.png" width="65%"></center>     
+ <center><img src="/images/causal_inf/metalearners.png" width="75%"></center>     
  <em>Image from "Introduction to Causal ML" in KDD 2021 [tutorial](https://causal-machine-learning.github.io/kdd2021-tutorial/)</em>
 <br><br>
 
@@ -86,10 +86,12 @@ Finally, some alternative ML for causal inference which we re not going to cover
 For our experiments, we compare three well-known packages that facilitate uplift learning techniques in python, using two datasets coming from recommender systems, with binary treatments and outcomes: [SKlift](https://github.com/maks-sh/scikit-uplift), [CausalML](https://github.com/uber/causalml) and [EconML](https://github.com/microsoft/EconML).
 
 
-| Dataset   | Treatment | Control | Yes | No |
-|:-----------------------------------------:|:-----------|---------:|:-----------:|---------------:|
-| [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data)  |     91543         | 90950   | 117615    | 64878         |
-| [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)          |   11882655        | 2096937 | 40774     | 13938818      |
+
+| Dataset                                  | Treatment | Control  | Y=1    | Y=0      |
+|------------------------------------------|:---------:|:--------:|:------:|:--------:|
+| [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data) |  91,543   |  90,950  | 117,615|   64,878   |
+| [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)         |11,882,655 | 2,096,937| 40,774 |13,938,818 |
+
 
 We compare **S**, **T**, and **X** learners based on XGBoost (**XGB**) and Logistic Regression (**LR**). The propensity model of the X-learner is by default an XGBoost classifier. Note that SKlift does not include an X-learner, so as a substitute, we use the two-model dependent data representation (**DDR**) model that utilizes the treatment model in a T-learner that is aware of the control model predictions. The train/test split is set to 50%, as this is a more realistic setting for uplift modeling compared to the regular ML 80-20%.
 
@@ -99,11 +101,11 @@ More specifically, an intuitive way to evaluate the model is by sorting the samp
 To this end we used the uplift for the top 40% of the dataset, similar to SKlift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
 A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in my analysis they where inconsistent through methods.
 
-<center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="50%"> 
+<center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="60%"> 
 </center>    
 <br><br>
 
- <center><img src="/images/causal_inf/Criteo_uplift40_n.png" width="50%"> </center>    
+ <center><img src="/images/causal_inf/Criteo_uplift40_n.png" width="60%"> </center>    
 <br><br>
 
 
