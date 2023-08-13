@@ -19,7 +19,7 @@ The big question when you conduct such a trial and gather the responses is, did 
 To measure the actual effect we would ideally want to find the users in the treatment group with Y=1, that would have Y=0 if T=0, and vice versa for the control group and Y=0. Since we cannot turn back time and reassign treatments such that we get these answers, this is called a **counterfactual** scenario. The outcome of such a counterfactual scenario is what we would like to predict/estimate. One can also think of this as trying to decipher the treatment effect for each individual instead of the whole sample set, so individual treatment effect (ITE).
 Loking at it from a marketing perspective, the marketers divide the users in four categories based on their potential responses to a campaign (i.e. trial):
 
- <center><img src="/images/causal_inf/persuadables.png" width="40%"> </center>
+ <center><img src="/images/causal_inf/persuadables.png" width="30%"> </center>
  <em>Taken from the ECML Uplift modeling [tutorial](https://upliftworkshop.ipipan.waw.pl/index_2022.html)</em>    
 <br><br>
 
@@ -65,7 +65,7 @@ Another problem here is that imbalances between the groups can induce bias in th
 Since the X-learner focuses on learning the uplift function itself, it is better able to capture its properties e.g. smoothness, while handling the imbalance that is prevalent between treatment and control groups.
 
 
- <center><img src="/images/causal_inf/metalearners.png" width="80%"></center>     
+ <center><img src="/images/causal_inf/metalearners.png" width="65%"></center>     
  <em>Image from "Introduction to Causal ML" in KDD 2021 [tutorial](https://causal-machine-learning.github.io/kdd2021-tutorial/)</em>
 <br><br>
 
@@ -86,8 +86,8 @@ Finally, some alternative ML for causal inference which we re not going to cover
 For our experiments, we compare three well-known packages that facilitate uplift learning techniques in python, using two datasets coming from recommender systems, with binary treatments and outcomes: [SKlift](https://github.com/maks-sh/scikit-uplift), [CausalML](https://github.com/uber/causalml) and [EconML](https://github.com/microsoft/EconML).
 
 
-| Dataset   | Treatment | Control | Converted | Not Converted |
-|:-----------------------------------------:|:-----------|:---------:|:-----------:|---------------:|
+| Dataset   | Treatment | Control | Yes | No |
+|:-----------------------------------------:|:-----------|---------:|:-----------:|---------------:|
 | [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data)  |     91543         | 90950   | 117615    | 64878         |
 | [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)          |   11882655        | 2096937 | 40774     | 13938818      |
 
@@ -99,11 +99,11 @@ More specifically, an intuitive way to evaluate the model is by sorting the samp
 To this end we used the uplift for the top 40% of the dataset, similar to SKlift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
 A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in my analysis they where inconsistent through methods.
 
-<center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="60%"> 
+<center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="50%"> 
 </center>    
 <br><br>
 
- <center><img src="/images/causal_inf/Criteo_uplift40_n.png" width="60%"> </center>    
+ <center><img src="/images/causal_inf/Criteo_uplift40_n.png" width="50%"> </center>    
 <br><br>
 
 
