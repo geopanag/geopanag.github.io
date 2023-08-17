@@ -16,7 +16,7 @@ About a week later, we started gathering respective data for France, Italy, and 
 
 
 
- <center><img src="/images/covid_tweets/table.png" width="20%"> </center>
+ <center><img src="/images/covid_tweets/table.png" width="30%"> </center>
 <br><br>
 
 
@@ -28,7 +28,7 @@ These tweets do not include only country-specific languages, e.g., french for fr
 We first study the tweeting activity patterns of the users with regards to the pandemic. The left Figure below shows the number of tweets, retweets and favorites as a function of time. Clearly, users became more active from March 2020. A very large number of retweets was posted between March 10 and March 13. The right Figure shows the p-value derived by computing granger causality between the time series of the left Figure and the time series that emerge from three actual pandemic metrics, namely the number of confirmed cases, the daily increase/decrease in the number of confirmed cases (delta), and the number of deaths. The results indicate a strong relationship between the number of tweets produced (last row of heatmap) and the pandemic metrics.
 
 
-<center><img src="/images/covid_tweets/stats.png" width="25%">  <img src="/images/covid_tweets/heatmap.png" width="25%"> </center>
+<center><img src="/images/covid_tweets/stats.png" width="35%">  <img src="/images/covid_tweets/heatmap.png" width="35%"> </center>
 <br><br>
 
 
@@ -39,10 +39,10 @@ Given our set of unique tweets, we create a graph where nodes correspond to twee
 
 
 
-<center><img src="/images/covid_tweets/feb15.png" width="10%"> <img src="/images/covid_tweets/feb22.png" width="10%">  <img src="/images/covid_tweets/feb29.png" width="10%"></center> 
+<center><img src="/images/covid_tweets/feb15.png" width="15%"> <img src="/images/covid_tweets/feb22.png" width="15%">  <img src="/images/covid_tweets/feb29.png" width="15%"></center> 
  <em>Feb 15, 22 & 29</em>  
 
- <center><img src="/images/covid_tweets/mar1.png" width="10%"> <img src="/images/covid_tweets/mar2.png" width="10%">  <img src="/images/covid_tweets/mar3.png" width="10%"></center> 
+ <center><img src="/images/covid_tweets/mar1.png" width="15%"> <img src="/images/covid_tweets/mar2.png" width="15%">  <img src="/images/covid_tweets/mar3.png" width="15%"></center> 
  <em>Mar 1, 2 & 3</em>      
 
 
@@ -51,7 +51,7 @@ For example, a more detailed view of the third graph (i.e., February 29) is give
 
 
 
- <center><img src="/images/covid_tweets/circle_plot.png" width="50%"> </center> 
+ <center><img src="/images/covid_tweets/circle_plot.png" width="55%"> </center> 
  <em>Individual components and their most frequent words on February 29</em>      
 <br><br>
 
@@ -61,7 +61,7 @@ After the 1st of March, however, COVID-19 has become a very central issue on Twi
 
 In order to discern any type of opinion groups inside the main component, we extracted it and applied a community detection algorithm based on weighted modularity.  We next computed the word cloud of the most frequent hashtags in the tweets of each community. The word cloud is shown below. 
 
- <center><img src="/images/covid_tweets/word_graph.png" width="50%"> </center> 
+ <center><img src="/images/covid_tweets/word_graph.png" width="55%"> </center> 
  <em>Communities of the tweet graph on March 10th and their most frequent hashtags</em>      
 <br><br>
 
