@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Analysis of Covid-19 tweets"
-date: 2023-12-01
+date: 2021-12-01
 category: ["all"]
 tags: ["Twitter", "Covid-19"]
 ---
