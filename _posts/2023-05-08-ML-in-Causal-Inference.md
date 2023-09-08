@@ -70,9 +70,9 @@ Since the X-learner focuses on learning the uplift function itself, it is better
 <br><br>
 
 
-Apart from counterfactual prediction, ML can assist in hypothesis testing due to its resiliense with high dimensional confounders, which hinders classical statistical approaches based on parametric functions.
+Apart from counterfactual prediction, ML can assist in hypothesis testing due to its resilience with high dimensional confounders, which hinders classical statistical approaches based on parametric functions.
 However uncovering the actual causal mechanisms of the outcome is a more involved task compared to prediction, hence using solely ML does not suffice.
-If we assume that indeed all confounders are observed, we can adjust the causal inference mechanism in in order to use ML to correct the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
+If we assume that indeed all confounders are observed, we can adjust the causal inference mechanism in order to use ML to correct the [bias of the experiment](https://academic.oup.com/ectj/article/21/1/C1/5056401?login=false).
 The aim in this case is to retrieve a more clear estimation of the treatment effect, and the main idea is to use two ML methods to estimate the propensity score and the outcome. Subsequently, use these estimates, along with K-fold partitioning of the samples, to mitigate both the treatment assignment and the outcome estimation bias during the **ATE** estimation.
 This decomposition uses ML to handle the confounders effectively, while keeping the original approach and its advantages, not to mention it has theoretically faster rates of converges to the [optimum](https://www.youtube.com/watch?v=eHOjmyoPCFU).
 
