@@ -99,7 +99,7 @@ Evaluating the uplift prediction is a relatively open question. In this case, si
 More specifically, an intuitive way to evaluate the model is by sorting the samples based on the respective uplift predictions and computing the actual uplift per percentile. We expect the first percentiles to show a considerable increase, while the latter to drop or even be negative, as these are samples that the model predicts to have low uplift. 
 
 To this end we used the uplift for the top 40% of the dataset, similar to SKlift's [tutorial](https://nbviewer.org/github/maks-sh/scikit-uplift/blob/master/notebooks/RetailHero_EN.ipynb). This is simple and straight forward, but we miss a potential error of the model, in case the actual uplift increases when the predicted uplift drops significantly. 
-A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in my analysis they where inconsistent through methods.
+A plot of the cumulative gain from the uplift percentiles as described [here](https://www.youtube.com/watch?v=VWjsi-5yc3w&ab_channel=PyData) is more suitable. The area under the QINI or Uplift curve can also be useful, although in this analysis they were inconsistent through methods. Note also that, due to the studies behind the datasets and to facilitate comparison, we assume the bigger the predicted uplift the better, which is not true in the real world.
 
 <center><img src="/images/causal_inf/RetailHero_uplift40_n.png" width="60%"> 
 </center>    
@@ -110,10 +110,10 @@ A plot of the cumulative gain from the uplift percentiles as described [here](ht
 
 
 As we expected the X-learner outperforms the other methods but not predominantly. The result is more clear for RetailHero, where the performance increases with the complexity of the method for both, **XGB** and **LR** classifiers.
-The CausalML **X** seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, specially for **S** and **T**.
+The CausalML **X** seems to provide the best overall performance in this case for both, **XGB** and **LR**, while EconML and SKlift have competitive results, especially for **S** and **T**.
 
-The large-scale size and the major imbalance between treatment/control renders Criteo a much harder baseline, and challenges the scalability of the methods. 
-This happens to the CausalML and SKlift case for **S** where the **LR** fails to converge. On the other hand EconML always provides an uplift but is quite diminished, possibly due to the dataset's scale.
+The large-scale size and the major imbalance between treatment/control renders Criteo a much harder baseline and challenges the scalability of the methods. 
+This happens to the CausalML and SKlift case for **S** where the **LR** fails to converge. On the other hand, EconML always provides an uplift but is quite diminished, possibly due to the dataset's scale.
 Overall the **T** and **LR** method seems to perform better in this case, and SKlift provides overall higher uplift.  
 
 The code to reproduce the analysis can be found in [github](https://github.com/geopanag/causal_inf_ml).
