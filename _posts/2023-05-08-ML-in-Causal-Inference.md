@@ -87,11 +87,12 @@ For our experiments, we compare three well-known packages that facilitate uplift
 
 
 
-| Dataset                                  | Treatment | Control  | Y=1    | Y=0      |
-|------------------------------------------|:---------:|:--------:|:------:|:--------:|
-| [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data) |  91,543   |  90,950  | 117,615|   64,878   |
-| [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/)         |11,882,655 | 2,096,937| 40,774 |13,938,818 |
-
+| Dataset                                  | [RetailHero](https://ods.ai/competitions/x5-retailhero-uplift-modeling/data)  | [Criteo](https://ailab.criteo.com/criteo-uplift-prediction-dataset/) |
+|------------------------------------------|:---------:|:--------:|
+| Treatment |  91,543   | 11,882,655   |
+| Control    |  90,950   | 2,096,937|
+| Y=1  | 117,615  | 40,774 |
+| Y=0  |  64,878  |  13,938,818 |
 
 We compare **S**, **T**, and **X** learners based on XGBoost (**XGB**) and Logistic Regression (**LR**). The propensity model of the X-learner is by default an XGBoost classifier. Note that SKlift does not include an X-learner, so as a substitute, we use the two-model dependent data representation (**DDR**) model that utilizes the treatment model in a T-learner that is aware of the control model predictions. The train/test split is set to 50%, as this is a more realistic setting for uplift modeling compared to the regular ML 80-20%.
 
