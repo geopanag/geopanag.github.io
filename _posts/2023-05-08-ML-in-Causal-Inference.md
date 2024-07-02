@@ -144,6 +144,7 @@ A [survey](https://web.archive.org/web/20201111172707id_/http://proceedings.mlr.
 
 Tutorials
 - https://github.com/vveitch/causality-tutorials/tree/main
+- https://sites.google.com/view/uplift-modeling-cikm23?pli=1#h.wfnep19t5x9g
 - https://www.youtube.com/watch?v=VWjsi-5yc3w 
 - https://www.youtube.com/watch?v=eHOjmyoPCFU
 - https://causal-machine-learning.github.io/kdd2021-tutorial/
